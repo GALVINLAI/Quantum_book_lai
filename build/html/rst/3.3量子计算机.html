@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.3 量子计算机 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -115,8 +118,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>3.3 量子计算机</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3.3 量子计算机</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/3.3量子计算机.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -127,9 +130,9 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>3.3 量子计算机<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>3.3 量子计算机<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <section id="id2">
-<h2>3.3.1 量子计算机整体架构<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>3.3.1 量子计算机整体架构<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p><strong>量子计算的定位：异构计算</strong></p>
 <p>  量子计算领域属于一个新兴高速发展的领域，在近二十年间，不论是量子算法的研究，还是量子芯片的研发均取得了巨大的进展。由于量子计算的理论研究有限，目前所说的量子计算机并非是一个可独立完成计算任务的设备，而是一个可以对特定问题有指数级别加速的协处理器。相应的，目前所说的量子计算，如图3.3.1所示，本质上来说是一种异构运算，即在经典计算机执行计算任务的同时，将需要加速的程序在量子芯片上执行。</p>
 <img alt="../_images/3.3.1.png" class="align-center" src="../_images/3.3.1.png" />
@@ -138,11 +141,6 @@
 <p>  因此，量子计算的程序代码实际执行中分为两种，一种是运行在CPU上的宿主代码（Host code），主要用于执行不需要加速的任务，并为需要加速的任务提供需要的数据；一种是运行在量子芯片上的设备代码（Device code），主要用于描述量子线路，控制量子程序在量子芯片上的执行顺序，以及数据的传输。不同类型的代码由于其运行的物理位置不同，编译方式和访问的资源均不同，这跟英伟达公司推出的用GPU解决复杂的计算问题的并行计算架构CUDA非常类似。如表3.3.1所示，以下所提及的量子程序，指的是Device code。</p>
 <p class="centered">
 <strong>表3.3.1 CUDA与量子计算架构的对比</strong></p><table class="docutils align-center">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>区别</strong></p></td>
 <td><p><strong>量子计算架构</strong></p></td>
@@ -164,7 +162,7 @@
 </table>
 </section>
 <section id="id3">
-<h2>3.3.2 量子程序架构（设备代码的架构）<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>3.3.2 量子程序架构（设备代码的架构）<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p><strong>量子高级语言</strong></p>
 <p>  与经典计算机语言类似，描述量子程序的语言也有高级语言与低级语言之分。量子高级语言，类似于经典计算机语言中C++。在描述量子线路时，不需要考虑量子芯片的底层物理实现，包括可执行量子逻辑门的种类，量子比特的连通性等，这就像一个经典的程序设计师并不需要考虑底层的执行芯片是x86架构，还是RISC架构一样。QPanda,QRunes均属于量子高级语言。量子高级语言主要用于描述量子线路的逻辑门构成，量子程序段之间的执行顺序，如Qif,QWhile等，以及内存之间的通信。</p>
 <p><strong>量子汇编语言的编译原则</strong></p>

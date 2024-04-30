@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.1 量子力学基础理论 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -117,8 +120,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>2.1 量子力学基础理论</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">2.1 量子力学基础理论</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/2.1量子力学理论基础.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -129,9 +132,9 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>2.1 量子力学基础理论<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>2.1 量子力学基础理论<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <section id="id2">
-<h2>2.1.1 量子系统<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>2.1.1 量子系统<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  对于一个非物理专业的人而言，量子力学概念晦涩难懂。鉴于此，本章节仅介绍量子力学的一些基础概念加之部分数学的相关知识，甚至不涉及薛定谔方程，就足够开始量子计算机的应用。这如同不需去了解CPU的工作原理以及经典计算机的组成原理，但仍能在日常生活中使用经典计算机或者编写经典程序一样。</p>
 <p>  在本章里，彻底抛却数学公式，纯粹去介绍宽泛的概念，目的仅仅想让读者都能了解这个问题——“量子究竟是什么”。</p>
 <p>  如果不想被量子的诡异事实所颠覆，并且对于线性代数很有把握的话，那么可以直接过渡到本教材的后面章节开始学习。</p>
@@ -286,7 +289,7 @@
 <p>  即为最大混合态。</p>
 </section>
 <section id="id3">
-<h2>2.1.2 观测量和计算基下的测量<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>2.1.2 观测量和计算基下的测量<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>  量子比特（qubit）不同于经典的比特（bit），一个量子比特 <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> 可以同时处于 <span class="math notranslate nohighlight">\(|0 \rangle\)</span> 和 <span class="math notranslate nohighlight">\(|1 \rangle\)</span> 两个状态，可用线性代数中的线性组合（linear combination）来表示为</p>
 <div class="math notranslate nohighlight">
 \[|\psi\rangle=\alpha|0\rangle+\beta|1\rangle\]</div>
@@ -350,7 +353,7 @@
 <p>  标准差是一个刻画典型分散程度的度量。</p>
 </section>
 <section id="id4">
-<h2>2.1.3 复合系统与联合测量<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h2>2.1.3 复合系统与联合测量<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
 <p>  拥有两个或两个以上的量子比特的量子系统通常被称为复合系统（composite systems）。单量子比特系统的描述与测量已有所了解，那么多个量子比特的系统该如何描述以及怎样去测量呢？单量子比特系统与多量子比特系统之间又有怎样的关系呢？首先，解决这些问题，需要认识一个新的运算-张量积（tensor products）。</p>
 <p><strong>张量积</strong></p>
 <p>  张量积是两个向量空间形成一个更大向量空间的运算。在量子力学中，量子的状态由希尔伯特空间（Hilbert spaces）中的单位向量来描述。</p>
@@ -402,7 +405,7 @@
 <p>  例如， 在双量子比特系统中：  <span class="math notranslate nohighlight">\(\left|\psi_{1}\right\rangle=1 / \sqrt{2}(|00\rangle-|11\rangle)\)</span> 处于纠缠态。而  <span class="math notranslate nohighlight">\(\left|\psi_{2}\right\rangle=1 / \sqrt{2}(|00\rangle+|01\rangle)\)</span> 是非纠缠的，这是因为  <span class="math notranslate nohighlight">\(\left|\psi_{2}\right\rangle\)</span> 还可分成  <span class="math notranslate nohighlight">\(1 / \sqrt{2}|0\rangle \otimes(|0\rangle+|1\rangle)\)</span> 。</p>
 <p><strong>复合系统的状态演化</strong></p>
 <p>  已知两能级的量子系统的状态是通过酉变换来实现演化的，那么复合系统的状态该如何随时间发生演化呢? 复合系统可以看成是子系统的张成，因此以下假设可以 说明复合系统中量子态的变化。</p>
-<p>  假设：复合系统中量子态的演化是由张成复合系统的子系统中量子态的演化对应的酉变换做张量生成的变换来描述，即是说，如果有被 1 到n标记的系统，第 <span class="math notranslate nohighlight">\({i}\)</span> 个系统在  <span class="math notranslate nohighlight">\(t_{1}\)</span> 时刻的状态为  <span class="math notranslate nohighlight">\(\left|\psi_{i}^{1}\right\rangle\)</span> ，那么生成的整个系统的联合状态  <span class="math notranslate nohighlight">\(\left|\psi^{1}\right\rangle\)</span> 为  <span class="math notranslate nohighlight">\(\left|\psi_{1}^{1}\right\rangle \otimes\left|\psi_{2}^{1}\right\rangle \otimes \cdots \otimes\left|\psi_{n}^{1}\right\rangle \)</span> 时刻，通过酉变换 <span class="math notranslate nohighlight">\(U_{i}\)</span> 将第  <span class="math notranslate nohighlight">\({i}\)</span> 个系统的状态演化为  <span class="math notranslate nohighlight">\(\left|\psi_{i}^{2}\right\rangle\)</span> ，那么在  <span class="math notranslate nohighlight">\(t_{2}\)</span> 时刻，复合系统的状态通过变换  <span class="math notranslate nohighlight">\(U_{1} \otimes U_{2} \otimes \cdots \otimes U_{n}\)</span> 演化为  <span class="math notranslate nohighlight">\(\left|\psi_{1}^{2}\right\rangle \otimes\left|\psi_{2}^{2}\right\rangle \otimes \cdots \otimes\left|\psi_{n}^{2}\right\rangle\)</span> 。</p>
+<p>  假设：复合系统中量子态的演化是由张成复合系统的子系统中量子态的演化对应的酉变换做张量生成的变换来描述，即是说，如果有被 1 到n标记的系统，第 <span class="math notranslate nohighlight">\({i}\)</span> 个系统在  <span class="math notranslate nohighlight">\(t_{1}\)</span> 时刻的状态为  <span class="math notranslate nohighlight">\(\left|\psi_{i}^{1}\right\rangle\)</span> ，那么生成的整个系统的联合状态  <span class="math notranslate nohighlight">\(\left|\psi^{1}\right\rangle\)</span> 为  <span class="math notranslate nohighlight">\(\left|\psi_{1}^{1}\right\rangle \otimes\left|\psi_{2}^{1}\right\rangle \otimes \cdots \otimes\left|\psi_{n}^{1}\right\rangle ` ；在  :math:`t_{2}\)</span> 时刻，通过酉变换 <span class="math notranslate nohighlight">\(U_{i}\)</span> 将第  <span class="math notranslate nohighlight">\({i}\)</span> 个系统的状态演化为  <span class="math notranslate nohighlight">\(\left|\psi_{i}^{2}\right\rangle\)</span> ，那么在  <span class="math notranslate nohighlight">\(t_{2}\)</span> 时刻，复合系统的状态通过变换  <span class="math notranslate nohighlight">\(U_{1} \otimes U_{2} \otimes \cdots \otimes U_{n}\)</span> 演化为  <span class="math notranslate nohighlight">\(\left|\psi_{1}^{2}\right\rangle \otimes\left|\psi_{2}^{2}\right\rangle \otimes \cdots \otimes\left|\psi_{n}^{2}\right\rangle\)</span> 。</p>
 <p>  例如，复合系统  <span class="math notranslate nohighlight">\(H\)</span> 由两能级系统  <span class="math notranslate nohighlight">\(H_{1}\)</span> 和  <span class="math notranslate nohighlight">\(H_{2}\)</span> 复合而成，在  <span class="math notranslate nohighlight">\(t_{1}\)</span> 时刻，两个系统的状态都为  <span class="math notranslate nohighlight">\(|0\rangle\)</span> ，则复合系统的状态为  <span class="math notranslate nohighlight">\(|00\rangle\)</span> ; 在时刻  <span class="math notranslate nohighlight">\(t_{2}\)</span> 第一个系统经过 <span class="math notranslate nohighlight">\(X\)</span> 门，状态变为  <span class="math notranslate nohighlight">\(|1\rangle\)</span> ，第二个系统经过  <span class="math notranslate nohighlight">\(Z\)</span> 门，状态为  <span class="math notranslate nohighlight">\(|0\rangle\)</span> ，那么复合系统的状态经过变换</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}X \otimes Z=\left[\begin{array}{ll} 0 &amp; 1 \\ 1 &amp; 0 \end{array}\right] \otimes\left[\begin{array}{cc} 1 &amp; 0 \\ 0 &amp; -1 \end{array}\right]=\left[\begin{array}{cccc} 0 &amp; 1 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; -1 &amp; 0 \end{array}\right]\end{split}\]</div>

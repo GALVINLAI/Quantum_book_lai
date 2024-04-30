@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.2 量子计算机硬件 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -116,8 +119,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>3.2 量子计算机硬件</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3.2 量子计算机硬件</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/3.2量子计算硬件.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,12 +131,12 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>3.2 量子计算机硬件<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>3.2 量子计算机硬件<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <p>  由上一章节知道，量子计算机的核心——量子芯片，具有多种不同的呈现形式。绝大多数量子芯片，名副其实地，是一块芯片，由集成在基片表面的电路结构构建出包含各类量子比特的量子电路。但量子芯片不等同于量子计算机，它仅仅是量子计算机中的一个核心结构。</p>
 <p>  量子计算机，是建立在量子芯片基础上的运算机器。其中最关键的两点是：如何将运算任务转化为对量子芯片中量子比特的控制指令；以及如何从量子芯片上量子比特的量子态中提取出运算结果。除此以外，更加基础地，量子计算机需要提供能维持量子芯片运行的基本环境。以上这些都需要特殊的硬件系统来实现，它们实现了量子计算机软件层到量子计算机芯片层的交互。</p>
 <p>  量子计算机硬件，主要包含两个部分，一个是量子芯片支持系统，用于提供量子芯片所必需的运行环境；另一个是量子计算机控制系统，用于实现对量子芯片的控制，以完成运算过程并获得运算结果。鉴于目前国际主流量子计算研发团队主要聚焦超导量子芯片与半导体量子芯片这两种体系，同时它们的量子计算机硬件有相当多的共性，因此以下将具体展开介绍这两种体系适用的量子计算机硬件。</p>
 <section id="id2">
-<h2>3.2.1 量子芯片支持系统<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>3.2.1 量子芯片支持系统<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  超导量子芯片和半导体量子芯片对运行环境的需求类似，最基本的需求均为接近绝对零度的极低温环境。其主要原因在于两种体系的量子比特的能级接近，基本上都在GHz频段。该频段内的热噪声对应的噪声温度约在300 mK以上。为了抑制环境噪声，必须使量子芯片工作在远低于其能级对应的热噪声温度。稀释制冷机能够提供量子芯片所需的工作温度和环境。利用3He/4He混合气实现稀释致冷，稀释制冷机能够将量子芯片冷却到10 mK以下的极低温。在2018年IBM’s inaugural Index 开发者大会上，IBM展示的“50位量子计算机原型机”，实际上就是维持50位量子芯片运行的稀释制冷机以及其内部的线路构造。</p>
 <img alt="../_images/wps499.png" class="align-center" src="../_images/wps499.png" />
 <p class="centered">
@@ -149,7 +152,7 @@
 <p class="centered">
 <strong>图 3.2.4 量子芯片支持系统中极低温控制线路的设置[46] （Flux offset source-磁通偏置源，Flux pulse source-磁通脉冲源，Qubit drive source-量子比特驱动源，Readout source-测量源，Readout detection-测量探测RC filter-RC滤波器，Cu powder-铜粉滤波器，LPF-低通滤波器，Bias-tee-一种电阻器件，XY-control-XY控制线，Z-control-Z控制线，Readout in-测量输入，Readout out-测量输出，Circulator-环形器，J-Amp-约瑟夫森量子参量放大器，HEMT-高电子迁移率放大器，Package-封装，Shield-屏蔽，Superconducting quantum chip-超导量子芯片）</strong></p></section>
 <section id="id3">
-<h2>3.2.2 量子计算机控制系统<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>3.2.2 量子计算机控制系统<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>  量子计算机控制系统提供的是以下两个关键问题的解决方案：如何将运算任务转化为对量子芯片中量子比特的控制指令；以及如何从量子芯片上量子比特的量子态中提取出运算结果。其背后的基础是，如何实施量子逻辑门操作，以及如何实施量子比特读取。</p>
 <img alt="../_images/3.2.5.png" class="align-center" src="../_images/3.2.5.png" />
 <p class="centered">

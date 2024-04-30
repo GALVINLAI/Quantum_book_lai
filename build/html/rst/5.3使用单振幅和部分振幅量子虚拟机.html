@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5.3 使用单振幅和部分振幅量子虚拟机 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -116,8 +119,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>5.3 使用单振幅和部分振幅量子虚拟机</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">5.3 使用单振幅和部分振幅量子虚拟机</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/5.3使用单振幅和部分振幅量子虚拟机.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,9 +131,9 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>5.3 使用单振幅和部分振幅量子虚拟机<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>5.3 使用单振幅和部分振幅量子虚拟机<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <section id="id2">
-<h2>5.3.1 单振幅量子虚拟机<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>5.3.1 单振幅量子虚拟机<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  目前可以通过量子计算的相关理论，用经典计算机实现模拟量子虚拟机。 量子虚拟机的模拟主要有全振幅与单振幅两种解决方案，其主要区别在于，全振幅一次模拟计算就能算出量子态的所有振幅，单振幅一次模拟计算只能计算出 <span class="math notranslate nohighlight">\(2^N\)</span> 个振幅中的一个。</p>
 <p>  然而全振幅模拟量子计算时间较长，计算量随量子比特数指数增长，在现有硬件下，无法模拟超过49量子比特。通过单振幅量子虚拟机技术可以模拟超过49比特，同时模拟速度有较大提升，且算法的计算量不随量子比特数指数提升。</p>
 <p><strong>使用介绍</strong></p>
@@ -250,7 +253,7 @@
 </div>
 </section>
 <section id="id3">
-<h2>5.3.2 部分振幅量子虚拟机<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>5.3.2 部分振幅量子虚拟机<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>  目前用经典计算机模拟量子虚拟机的主流解决方案有全振幅与单振幅两种。除此之外，还有部分振幅量子虚拟机，该方案能在更低的硬件条件下，实现更高的模拟效率。 部分振幅算法的基本思想是将大比特的量子计算线路图拆分成若干个小比特线路图，具体数量视线路扶持情况而定。</p>
 <p><strong>使用介绍</strong></p>
 <p>  QPanda2中设计了 PartialAmplitudeQVM 类用于运行部分振幅模拟量子计算，同时提供了相关接口，它的使用很简单。</p>

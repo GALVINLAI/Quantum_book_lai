@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.7 Shor分解算法 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -119,8 +122,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>4.7 Shor分解算法</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">4.7 Shor分解算法</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/4.7Shor分解算法.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -131,10 +134,10 @@
            <div itemprop="articleBody">
              
   <section id="shor">
-<h1>4.7 Shor分解算法<a class="headerlink" href="#shor" title="Permalink to this heading">¶</a></h1>
+<h1>4.7 Shor分解算法<a class="headerlink" href="#shor" title="Link to this heading">¶</a></h1>
 <p>  Shor算法，又叫质因数分解算法，是以数学家Peter·Shor命名的。1994年，Shor针对“给定一个整数 <span class="math notranslate nohighlight">\(N\)</span> ，找出它的质因数”这道题，发明了破解RSA加密的量子算法。在一个量子计算机上面，要分解整数 <span class="math notranslate nohighlight">\(N\)</span> ，Shor算法的运作需要多项式时间（时间是 <span class="math notranslate nohighlight">\(\log N\)</span> 的某个多项式这么长， <span class="math notranslate nohighlight">\(\log N\)</span> 在这里的意义是输入的文件长度）。更精确的说，这个算法花费 <span class="math notranslate nohighlight">\(\mathrm{O}((\log N)^3)\)</span> 的时间，展示出质因数分解问题可以使用量子计算机以多项式时间解出，因此在复杂度类BQP里面。这比起传统已知最快的因数分解算法:普通数域筛选法，其花费次指数时间 – 大约 <span class="math notranslate nohighlight">\(\mathrm{O}\left(e^{1.92(\log N)^{1 / 3}(\log \log N) ^{2 / 3}}\right)\)</span> ，还要快了一个指数的差异。</p>
 <section id="id1">
-<h2>4.7.1 加密与解密<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>4.7.1 加密与解密<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <p>  自古以来，加密和解密都伴随着人类的发展。中国军事谋略中也常听到知己知彼，百战不殆的说法；在军事上，信息的安全保密被认为是取得胜利的关键因素；在生活中，也经常可以看到使用智慧找到解开密码的方法（方法就是密码学里的密钥），从而解开那些千奇百怪的密文。</p>
 <p>  密码学，主要分为古典密码学和现代密码学。对于计算机时代，主要讨论现代加密方式，就是基于二进制编码信息的现代密码学。</p>
 <p><strong>对称加密（symmetric encryption）</strong></p>
@@ -149,7 +152,7 @@
 <p class="centered">
 <strong>图4.7.2 非对称加密</strong></p></section>
 <section id="rsa">
-<h2>4.7.2 RSA加密算法<a class="headerlink" href="#rsa" title="Permalink to this heading">¶</a></h2>
+<h2>4.7.2 RSA加密算法<a class="headerlink" href="#rsa" title="Link to this heading">¶</a></h2>
 <p>  RSA加密算法是1977年由罗纳德·李维斯特（Ron Rivest）、阿迪·萨莫尔（Adi Shamir）和伦纳德·阿德曼（Leonard Adleman）一起提出的。该算法是著名的非对称加密算法，它是数论与计算机科学相结合产物。目前，很多加密方式都采用这个原理，而Shor算法所威胁的正是RSA的加密方式.</p>
 <p>  RSA是Internet上的标准加密算法。该方法是公知的，但非常难以破解。其核心是它使用两个密钥进行加密，公钥是公开的，客户端使用它来加密随机会话密钥；截获加密密钥的任何人都必须使用第二个密钥（私钥）对其进行解密；否则，得到的信息是没有任何含义。而会话密钥解密后，服务器使用它以更快的算法加密和解密更多消息。因此，只要保证私钥安全，通信就是安全的。</p>
 <p>  实际上，RSA算法，其核心的思想并不困难，它使用的是，两个质数相乘容易，但是反过来分解成两个质数相乘却非常困难的规则来构建。</p>
@@ -158,7 +161,7 @@
 <strong>图4.7.3 数字相乘与数字分解</strong></p><p>  例如图4.7.3，求这串数字相乘，对于经典计算机来说，非常的简单。但是如果将这串数字分解为两个质数相乘，就非常困难。</p>
 <p><strong>RSA算法规则</strong></p>
 <p>  首先要使用概率算法来验证随机产生的大的整数是否是质数，这样的算法比较快而且可以消除掉大多数非质数。假如有一个数通过了这个测试的话，那么要使用一个精确的测试来保证它的确是一个质数。</p>
-<p>  首先，生成两个大的质数  <span class="math notranslate nohighlight">\(\mathrm{p}\)</span> 和  <span class="math notranslate nohighlight">\(\mathrm{q}\)</span> ; 然后计算  <span class="math notranslate nohighlight">\(\mathrm{n}=\mathrm{p} \times \mathrm{q}\)</span> ， 以及  <span class="math notranslate nohighlight">\(\varphi=(p-1) \times(q-1)\)</span> ; 再选择一个随机数 <span class="math notranslate nohighlight">\(1&lt;e&lt;\varphi\)</span> , 那么， <span class="math notranslate nohighlight">\(\text{gcd}(e, \varphi)=1\)</span> ; 最后计算唯一的整数  <span class="math notranslate nohighlight">\(1&lt;d&lt;\varphi\)</span> , 那么: <span class="math notranslate nohighlight">\(e \times d=1(\bmod \varphi)\)</span> ; 就可以生成  <span class="math notranslate nohighlight">\((d, n)\)</span> 是私钥;  <span class="math notranslate nohighlight">\((e, n)\)</span> 用区间  <span class="math notranslate nohighlight">\([0, n-1]\)</span> 的整数来表示; 通过加密得到数据 <span class="math notranslate nohighlight">\(c\)</span> ，然后发送 <span class="math notranslate nohighlight">\(c\)</span>。</p>
+<p>  首先，生成两个大的质数  <span class="math notranslate nohighlight">\(\mathrm{p}\)</span> 和  <span class="math notranslate nohighlight">\(\mathrm{q}\)</span> ; 然后计算  <span class="math notranslate nohighlight">\(\mathrm{n}=\mathrm{p} \times \mathrm{q}\)</span> ， 以及  <span class="math notranslate nohighlight">\(\varphi=(p-1) \times(q-1)\)</span> ; 再选择一个随机数 <span class="math notranslate nohighlight">\(1&lt;e&lt;\varphi\)</span> , 那么， <span class="math notranslate nohighlight">\(\text{gcd}(e, \varphi)=1\)</span> ; 最后计算唯一的整数  <span class="math notranslate nohighlight">\(1&lt;d&lt;\varphi\)</span> , 那么: <span class="math notranslate nohighlight">\(e \times d=1(\bmod \varphi)\)</span> ; 就可以生成  <span class="math notranslate nohighlight">\((d, n)\)</span> 是私钥;  <span class="math notranslate nohighlight">\((e, n)`是公钥。 进行加密，将讯息 :math:`m\)</span> 用区间  <span class="math notranslate nohighlight">\([0, n-1]\)</span> 的整数来表示; 通过加密得到数据 <span class="math notranslate nohighlight">\(c\)</span> ，然后发送 <span class="math notranslate nohighlight">\(c\)</span>。</p>
 <div class="math notranslate nohighlight">
 \[c=m^{e} \bmod n\]</div>
 <p>  那么，解密钥则是:</p>
@@ -231,7 +234,7 @@
 <p class="centered">
 <strong>图4.7.8 经典算法和Shor算法对比情况</strong></p></section>
 <section id="id2">
-<h2>4.7.3 量子逻辑电路及量子傅里叶变换<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>4.7.3 量子逻辑电路及量子傅里叶变换<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  量子逻辑电路,分为经典不可逆逻辑电路和经典可逆逻辑电路。</p>
 <p><strong>经典不可逆逻辑电路</strong></p>
 <p>  对于经典计算，可建立抽象的计算模型。如图4.7.9所示：</p>
@@ -262,7 +265,7 @@
 <p class="centered">
 <strong>图4.7.13 经典加法器模型</strong></p><p>  其对应的真值表，如表4.7.1所示：</p>
 <p class="centered">
-<strong>表4.7.1 经典加法器真值表</strong></p><img alt="../_images/表4.7.1.png" class="align-center" src="../_images/表4.7.1.png" />
+<strong>表4.7.1 经典加法器真值表</strong></p><img alt="../_images/%E8%A1%A84.7.1.png" class="align-center" src="../_images/%E8%A1%A84.7.1.png" />
 <p>  由上述可知，假设给定任意的输入  <span class="math notranslate nohighlight">\(a_{i}\)</span> ,  <span class="math notranslate nohighlight">\(b_{i}\)</span> ,  <span class="math notranslate nohighlight">\(c_{i}\)</span> ，都能有对应的值输出; 并且它们都 满足上述的加法条件。</p>
 <p><strong>量子加法器假想模型</strong></p>
 <p>  经典加法器的模型，实际上是一个不可逆的变换，因为它有三个输入两个输出，不可实现复原操作。所以量子加法器的模型需要去构建一个酉变换，也就是可逆操作；它可以通过一次计算，同时得到  <span class="math notranslate nohighlight">\(s_{i}\)</span> 和  <span class="math notranslate nohighlight">\(c_{i+1}\)</span> 。如图4.7.14：</p>
@@ -398,7 +401,7 @@
 <p class="centered">
 <strong>图4.7.34 PyQPanda演示</strong></p></section>
 <section id="id3">
-<h2>4.7.4 算法原理<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>4.7.4 算法原理<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p><strong>算法原理概述</strong></p>
 <p>  从时间复杂度上比较：使用传统计算机，解决素数分解的最佳复杂度如图4.7.35所示：（n，表示素数乘积的位数）</p>
 <a class="reference internal image-reference" href="../_images/4.7.35.png"><img alt="../_images/4.7.35.png" class="align-center" src="../_images/4.7.35.png" style="width: 250px;" /></a>
@@ -546,7 +549,7 @@
 <div class="math notranslate nohighlight">
 \[P_{k \max }=\frac{r}{Q^{2}} \times m^{2} \approx \frac{1}{r}, m \times r \approx Q\]</div>
 <p>  由此可知，可以通过测量概率找到  <span class="math notranslate nohighlight">\(\mathrm{r}\)</span> 的关系。</p>
-<p>  最后测量的 <span class="math notranslate nohighlight">\(|k\rangle\)</span> ,测量结果满足  <span class="math notranslate nohighlight">\(\theta=\frac{k \times r}{Q}\)</span> 为整数或接近整数，根据  <span class="math notranslate nohighlight">\(\frac{k}{Q} \sim \sim \frac{s}{r}\)</span> 对  <span class="math notranslate nohighlight">\(\frac{k}{Q}\)</span> 做连分数分解，得到  <span class="math notranslate nohighlight">\(r\)</span> 的周期。通过模拟，假设  <span class="math notranslate nohighlight">\(\mathrm{m}=50\)</span> ， <span class="math notranslate nohighlight">\(\frac{1-\cos (m \times \theta)}{1-\cos (\theta)}\)</span> 的演算如图 4.7.57:</p>
+<p>  最后测量的 <span class="math notranslate nohighlight">\(|k\rangle\)</span> ,测量结果满足  <span class="math notranslate nohighlight">\(\theta=\frac{k \times r}{Q}\)</span> 为整数或接近整数，根据  <span class="math notranslate nohighlight">\(\frac{k}{Q} \sim \sim \frac{s}{r}\)</span> 对  <span class="math notranslate nohighlight">\(\frac{k}{Q}\)</span> 做连分数分解，得到  <span class="math notranslate nohighlight">\(r`的值，即得到  :math:`f(x)=a^{x} \bmod N\)</span> 的周期。通过模拟，假设  <span class="math notranslate nohighlight">\(\mathrm{m}=50\)</span> ， <span class="math notranslate nohighlight">\(\frac{1-\cos (m \times \theta)}{1-\cos (\theta)}\)</span> 的演算如图 4.7.57:</p>
 <a class="reference internal image-reference" href="../_images/4.7.56.png"><img alt="../_images/4.7.56.png" class="align-center" src="../_images/4.7.56.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图4.7.56  <span class="math notranslate nohighlight">\(\mathrm{m}=50\)</span> ，  <span class="math notranslate nohighlight">\(\frac{1-\cos (m \times \theta)}{1-\cos (\theta)}\)</span> 的演算</strong></p><p>  由上图可知，它已经有了相应的值，那这些值就是最终要选取的值。</p>
@@ -566,7 +569,7 @@
 <strong>图4.7.58 连分数逼近</strong></p><p>   如图4.7.58可知，K值是预计测量的值，通过计算，再使用连分数的逼近关系，可以得出的结果是 <span class="math notranslate nohighlight">\(r=30\)</span> ，满足我们的条件。</p>
 </section>
 <section id="pyqpanda">
-<h2>4.7.5 pyQPanda中的示例<a class="headerlink" href="#pyqpanda" title="Permalink to this heading">¶</a></h2>
+<h2>4.7.5 pyQPanda中的示例<a class="headerlink" href="#pyqpanda" title="Link to this heading">¶</a></h2>
 <p>  导入依赖的库</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="kn">from</span> <span class="nn">pyqpanda</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="mf">2.</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1">#绘图</span>

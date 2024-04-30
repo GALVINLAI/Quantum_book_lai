@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.4 Grover算法 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -112,8 +115,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>4.4 Grover算法</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">4.4 Grover算法</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/4.4Grover算法.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -124,7 +127,7 @@
            <div itemprop="articleBody">
              
   <section id="grover">
-<h1>4.4 Grover算法<a class="headerlink" href="#grover" title="Permalink to this heading">¶</a></h1>
+<h1>4.4 Grover算法<a class="headerlink" href="#grover" title="Link to this heading">¶</a></h1>
 <p>  什么是搜索算法呢？举一个简单的例子，在下班的高峰期，要从公司回到家里，开车走怎样的路线才能够耗时最短呢？最简单的想法，当然是把所有可能的路线一次一次的计算，根据路况计算每条路线所消耗的时间，最终可以得到用时最短的路线，即为最快路线，这样依次的将每一种路线计算出来，最终对比得到最短路线。搜索的速度与总路线数 <span class="math notranslate nohighlight">\(N\)</span> 相关，记为  <span class="math notranslate nohighlight">\(O(N)\)</span> ，而采用量子搜索算法，则可以以  <span class="math notranslate nohighlight">\(O(sqrt(N))\)</span> 的速度进行搜索，要远快于传统的搜索算法。</p>
 <p>  那么怎么实现Grover搜索算法呢？</p>
 <p>  首先，先化简一下搜索模型，将所有数据存在数据库中，假设有 <span class="math notranslate nohighlight">\(n\)</span> 个量子比特，用来记录数据库中的每一个数据的索引，一共可以表示 <span class="math notranslate nohighlight">\(2^n\)</span> 个数据，记为 <span class="math notranslate nohighlight">\(N\)</span> 个；希望搜索得到的数据有 <span class="math notranslate nohighlight">\(M\)</span> 个，为了表示一个数据是否是搜索的结果，建立一个函数：</p>

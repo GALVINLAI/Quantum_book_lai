@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1.6 矩阵的函数 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -119,8 +122,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>1.6 矩阵的函数</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">1.6 矩阵的函数</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/附录1量子计算数学基础5.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -131,7 +134,7 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>1.6 矩阵的函数<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>1.6 矩阵的函数<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <p>​  类似于实数的函数，可以定义矩阵的函数。例如在实数的多项式函数中只用到了加法和幂运算，也可以类似地定义矩阵的多项式函数，这里的矩阵一般为方阵，因为需要用到幂运算。下面主要介绍矩阵（方阵）的指数函数。</p>
 <p>​  定义 <span class="math notranslate nohighlight">\(1.6.1\)</span>  <span class="math notranslate nohighlight">\(e^{A}={I+A+\frac{A^{2}}{2!}+\frac{A^{3}}{3!}+\frac{A^{4}}{4!}+ \cdots}\)</span></p>
 <p>​  这个定义相当于把 <span class="math notranslate nohighlight">\(f(x)=e^{x}\)</span> 在原点泰勒展开（关于泰勒展开可见于微积分书中内容），然后把矩阵 <span class="math notranslate nohighlight">\(A\)</span> 带入泰勒展开式进行运算。</p>
@@ -160,9 +163,9 @@
 <p>​  将以上三式代入欧拉公式等式两端，不难验证两端相等。</p>
 </section>
 <section id="id2">
-<h1>1.7 线性算子与矩阵表示<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h1>
+<h1>1.7 线性算子与矩阵表示<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h1>
 <section id="id3">
-<h2>1.7.1 线性算子<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>1.7.1 线性算子<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>​  正比例函数  <span class="math notranslate nohighlight">\(y=k x(k \neq 0)\)</span>  ，即  <span class="math notranslate nohighlight">\(f(x)=k x\)</span>  。比如，在日常生活中，一斤米 <span class="math notranslate nohighlight">\(k\)</span> 元，买了 <span class="math notranslate nohighlight">\(x\)</span> 斤，就要付给商家  <span class="math notranslate nohighlight">\({kx}\)</span>  元钱。正比例函数对任意的实数  <span class="math notranslate nohighlight">\(x_{1}\)</span> , <span class="math notranslate nohighlight">\(x_{2}\)</span>  ，  <span class="math notranslate nohighlight">\(f\left(x_{1}+x_{2}\right)=k\left(x_{1}+x_{2}\right)=k x_{1}+k x_{2}=f\left(x_{1}\right)+f\left(x_{2}\right)\)</span> ; 对 任意的  <span class="math notranslate nohighlight">\(x\)</span> , <span class="math notranslate nohighlight">\(a\)</span> ,有  <span class="math notranslate nohighlight">\(f(a x)=k(a x)=a(k x)=a f(x)\)</span>  。这说明正比例函数保持加法运算与数乘运算  <span class="math notranslate nohighlight">\([4]\)</span>  。受这类事例启发，给出线性算子的概念。 如果数域K上的向量空间  <span class="math notranslate nohighlight">\(V \equiv K^{m}\)</span>  到向量空间  <span class="math notranslate nohighlight">\(W \equiv K^{n}\)</span>  的一个映射  <span class="math notranslate nohighlight">\(\sigma\)</span> 保持加法和数乘运算，即  <span class="math notranslate nohighlight">\(\forall|u\rangle\)</span> , <span class="math notranslate nohighlight">\(| {v}\rangle \in V\)</span> , <span class="math notranslate nohighlight">\(k \in K\)</span> , 有</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned} &amp;\sigma(|u\rangle+|v\rangle)=\sigma(|u\rangle)+\sigma|v\rangle \\ &amp;\sigma(k|u\rangle)=k \sigma(|u\rangle) \end{aligned}\end{split}\]</div>
@@ -179,7 +182,7 @@
 <p>​  由于线性算子是映射的一种特殊情况，因此线性算子也可以做映射的合成，并满足合成的结合律。</p>
 </section>
 <section id="id4">
-<h2>1.7.2 矩阵表示<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h2>1.7.2 矩阵表示<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
 <p>​  最直观的理解线性算子的方式就是通过线性算子的矩阵表示 (matrix representations)，因为矩阵能有一个直观的认识  <span class="math notranslate nohighlight">\([3,4,6,7]\)</span> 。</p>
 <p>​  设  <span class="math notranslate nohighlight">\(\sigma: \mathrm{V} \rightarrow \mathrm{W}\)</span> 是向量空间  <span class="math notranslate nohighlight">\(V\)</span> 到向量空间W的线性算子，选定向量组  <span class="math notranslate nohighlight">\(\{|v_{1}\rangle,|v_{2}\rangle, \cdots,|v_{n}\rangle\}\)</span>  为向量空间  <span class="math notranslate nohighlight">\(V\)</span> 的一 个基，向量组  <span class="math notranslate nohighlight">\(\{|w_{1}\rangle,|w_{2}\rangle, \cdots,|w_{m}\rangle\}\)</span>  为向量空间  <span class="math notranslate nohighlight">\(W\)</span>  的一个基，由于向量空间 <span class="math notranslate nohighlight">\(V\)</span> 中的任意向量  <span class="math notranslate nohighlight">\(|v\rangle\)</span>  都可以由基  <span class="math notranslate nohighlight">\(\{|v_{1}\rangle,|v_{2}\rangle, \cdots,|v_{n}\rangle\}\)</span> 线性表示, 根据线性算子的保持加法和数乘的性质，只要确定 <span class="math notranslate nohighlight">\(\sigma\)</span> 作用在基 <span class="math notranslate nohighlight">\(\{|v_{1}\rangle,|v_{2}\rangle, \cdots,|v_{n}\rangle\}\)</span> 上的像，从而也就确定了线性算子 <span class="math notranslate nohighlight">\(\sigma\)</span> 作用在任意向量  <span class="math notranslate nohighlight">\(| {v}\rangle\)</span> 上的像。</p>
 <p>​  根据线性算子的定义可知，线性算子本质上是两个向量空间之间的映射，而映射表示一种对应关系。如果确 定空间V中每一个  <span class="math notranslate nohighlight">\(|v\rangle\)</span> 在映射作用到向量空间 <span class="math notranslate nohighlight">\(W\)</span> 中的像，也就确定从向量空间 <span class="math notranslate nohighlight">\(V\)</span> 到向量空间 <span class="math notranslate nohighlight">\(W\)</span> 的对应关系，即 线性算子  <span class="math notranslate nohighlight">\(\sigma: V \rightarrow W\)</span> 也就被确定。</p>
@@ -201,9 +204,9 @@
 <p>​  而线性算子  <span class="math notranslate nohighlight">\(\left\langle u\right|\)</span> 在向量空间V中标准正交基下的矩阵表示为1乘n的矩阵  <span class="math notranslate nohighlight">\(\left[\begin{array}{lll}u_{1}^{*} &amp; \cdots &amp; u_{n}^{*}\end{array}\right]\)</span>  。</p>
 </section>
 <section id="id5">
-<h2>1.7.3 向量外积<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<h2>1.7.3 向量外积<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <p>​  一个n维向量可以看作一个1乘n或n乘1的矩阵，反过来，m乘n的矩阵可不可以看作一个向量呢? 本质上向量 和矩阵是一样的，只不过人们在不同的情况下，运用不同的表示方式。类比向量，矩阵的基又是什么呢? 矩 阵是一个线性映射，在给定基下，线性算子与矩阵等价，向量空间中的基与矩阵表示又有什么关系呢?</p>
-<p>​  基于以上的疑问，下面引进向量外积的概念[6]。假设  <span class="math notranslate nohighlight">\(| {v}\rangle | {w}\rangle \)</span>  中的向量，定义  <span class="math notranslate nohighlight">\(| {v}\rangle\left\langle {w}\right|\)</span> 是从 <span class="math notranslate nohighlight">\(V\)</span> 到 <span class="math notranslate nohighlight">\(W\)</span> 的线性算子，并且满足运算规则。</p>
+<p>​  基于以上的疑问，下面引进向量外积的概念[6]。假设  <span class="math notranslate nohighlight">\(| {v}\rangle | {w}\rangle ` 是m维内积空间 :math:`W\)</span>  中的向量，定义  <span class="math notranslate nohighlight">\(| {v}\rangle\left\langle {w}\right|\)</span> 是从 <span class="math notranslate nohighlight">\(V\)</span> 到 <span class="math notranslate nohighlight">\(W\)</span> 的线性算子，并且满足运算规则。</p>
 <div class="math notranslate nohighlight">
 \[(|w\rangle\langle v|)(|\tilde{v}\rangle):=|w\rangle(\langle v \mid \tilde{v}\rangle)=\langle v \mid \tilde{v}\rangle|w\rangle\]</div>
 <p>​  这里借助于内积的运算定义了外积。 设在给定标准正价基下，向量  <span class="math notranslate nohighlight">\(|v\rangle,|w\rangle\)</span> 的坐标表示分别为:</p>
@@ -215,7 +218,7 @@
 <p>​  可以看出，在给定标准正交基下，线性算子  <span class="math notranslate nohighlight">\(|w\rangle\left\langle\left. v\right| \right.\)</span> 的矩阵表示为向量 <span class="math notranslate nohighlight">\(\mid {w}\rangle\)</span> 的坐标表示与  <span class="math notranslate nohighlight">\(| {v}\rangle\)</span> 的对偶向量的坐标表示的矩阵乘法得到。</p>
 </section>
 <section id="id6">
-<h2>1.7.4 对角表示<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<h2>1.7.4 对角表示<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
 <p>​  向量空间V上的线性算子A的对角表示 (diagonal representation)  <span class="math notranslate nohighlight">\([4,6]\)</span>  是指 <span class="math notranslate nohighlight">\(A\)</span> 可以表示成</p>
 <div class="math notranslate nohighlight">
 \[A=\sum_{i} \lambda_{\rho}|i\rangle\langle i|\]</div>
@@ -232,7 +235,7 @@
 <p>​  <strong>定理</strong> 向量空间V上任意线性算子A是正规算子的充要条件是在  <span class="math notranslate nohighlight">\(V\)</span>  的某个标准正交基下， 线性算子A有对角表示。</p>
 </section>
 <section id="id7">
-<h2>1.7.5 影算子<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
+<h2>1.7.5 影算子<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
 <p>​  假设  <span class="math notranslate nohighlight">\(U\)</span>  是  <span class="math notranslate nohighlight">\(n\)</span>  维向量空间  <span class="math notranslate nohighlight">\(V\)</span>  的k维子空间，可以从V标准正交基中找到  <span class="math notranslate nohighlight">\(k\)</span>  维子空间  <span class="math notranslate nohighlight">\(U\)</span>  的标准正交基并标记为  <span class="math notranslate nohighlight">\(|1\rangle, \cdots|k\rangle\)</span>  ，定义</p>
 <div class="math notranslate nohighlight">
 \[P:=\sum_{i=1}^{k}|i\rangle\langle i|\]</div>

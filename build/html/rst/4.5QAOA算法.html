@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.5 QAOA算法 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -121,8 +124,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>4.5 QAOA算法</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">4.5 QAOA算法</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/4.5QAOA算法.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -133,12 +136,12 @@
            <div itemprop="articleBody">
              
   <section id="qaoa">
-<h1>4.5 QAOA算法<a class="headerlink" href="#qaoa" title="Permalink to this heading">¶</a></h1>
+<h1>4.5 QAOA算法<a class="headerlink" href="#qaoa" title="Link to this heading">¶</a></h1>
 <p>  QAOA算法（Quantum Approximate Optimization Algorithm），又名量子近似优化算法，是由Edward Farhi, Jeffrey Goldstone和Sam Gutmann开发的一个多项式时间算法，用于寻找“最优化问题的一种‘好’的解决方案” 。</p>
 <p>  Farhi, Goldstone和Gutmann都是现今量子计算领域有名的教授，其中Edward Farhi和Jeffrey Goldstone是麻省理工学院的名誉教授。他们在2000年一起发表了绝热演化量子计算算法，2014年在此基础上他们又共同发表了量子近似优化算法（QAOA）。</p>
 <p>  这个名字是什么意思呢？对于给定的NP-Hard问题，近似算法是一种多项式时间算法，该算法以期望的一些质量保证来解决每个问题实例，其中品质因数是多项式时间解的质量与真实解的质量之间的比率。QAOA算法很有意思的一个原因是它具有展示量子霸权的潜力。</p>
 <section id="id1">
-<h2>4.5.1 最大切割问题<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>4.5.1 最大切割问题<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <p>  最大切割问题（MAXCUT）是原始量子近似优化算法论文中描述的第一个应用。此问题类似于图形着色，对于给定节点和边的图形，并给每个边分配一个分值，接着将每个节点着色为黑色或白色，然后计算不同颜色节点边的分值之和，目的是找到一组得分最高的着色方式；更正式地表述是将图的节点划分为两组，使得连接相对组中的节点的边的数量最大化。例如图4.5.1的杠铃图:</p>
 <a class="reference internal image-reference" href="../_images/4.5.1.png"><img alt="../_images/4.5.1.png" class="align-center" src="../_images/4.5.1.png" style="width: 350px;" /></a>
 <p class="centered">
@@ -159,12 +162,6 @@
 <p>  假设令方形图切割边的值都为1，可以将方形图中的切割方案全部枚举出来，如表4.5.1所示</p>
 <p class="centered">
 <strong>表4.5.1 切割方案及切割值</strong></p><table class="docutils align-center">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>切割方案</p></td>
 <td><p>切割值</p></td>
@@ -219,7 +216,7 @@
 <p>  答案是不能的，对于10000个节点来说，就算把全球的计算资源都加起来也要计算很长的时间，那是否有其他的解决方案呢？答案是有的，QAOA其实就是最大切割的一种解决方案。</p>
 </section>
 <section id="id2">
-<h2>4.5.2 布尔可满足性问题<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>4.5.2 布尔可满足性问题<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  布尔可满足性问题（有时称为命题可满足性问题，缩写为SATISFIABILITY或SAT），就是确定是否存在满足给定布尔公式的解释的问题。</p>
 <p>  布尔表达式是由布尔变量和逻辑运算符（NOT , AND ,OR）所构成的表达式。其中NOT又称逻辑非 <span class="math notranslate nohighlight">\((\neg)\)</span> ，AND又称逻辑与 <span class="math notranslate nohighlight">\((\wedge)\)</span> ，OR又称逻辑或 <span class="math notranslate nohighlight">\((\vee)\)</span> 。</p>
 <p>例如：</p>
@@ -247,7 +244,7 @@
 <p>  传统的方法有：枚举法、局部搜索法和贪婪算法等，但由于搜索空间大，问题一般难以求解。对于像SAT一类的NP难解问题，采用一些现代启发式方法如演化算法往往较为有效。</p>
 </section>
 <section id="id3">
-<h2>4.5.3 组合最优化问题<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>4.5.3 组合最优化问题<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>  组合最优化是指通过对数学方法的研究去寻找处理离散事件的最优编排、分组、次序或筛选等问题的优化方法。实际上就是从有限个离散状态中选取最好的状态。</p>
 <p>  组合最优化的模型如下</p>
 <div class="math notranslate nohighlight">
@@ -257,17 +254,17 @@
 <p>  组合最优化的特点就是定义域集合为有限点集。由直观可知，只要将定义域D中的有限个点逐一判别是否满足约束，并比较目标函数的大小，就可以得到该问题的最优解，这就是枚举法。对于某些优化问题可以通过枚举法得到最优解，这在问题规模较小时是十分有效的，考虑的点也是非常全面的。每一个组合最优化问题都可以通过枚举的方法求得最优解，然而枚举是以时间为代价的，有的枚举时间还可以接受，有的则不可能接受。</p>
 <p>  例如背包问题，旅行商问题，以及最大切割问题都是组合最优化问题。那么，有哪些方法解决这类问题呢？如表4.5.2所示：</p>
 <p class="centered">
-<strong>表4.5.2 如何求解组合最优化问题</strong></p><img alt="../_images/表4.5.2.png" class="align-center" src="../_images/表4.5.2.png" />
+<strong>表4.5.2 如何求解组合最优化问题</strong></p><img alt="../_images/%E8%A1%A84.5.2.png" class="align-center" src="../_images/%E8%A1%A84.5.2.png" />
 <p>  最优化问题，它一般分为两大类：一类是具有连续型的变量，另一类是具有离散型的变量，后一类被称为组合最优化问题。在应用方面，可以将连续优化问题通过设定步长转换为离散优化问题，这样就可以使用组合优化问题的方法求解了。</p>
 </section>
 <section id="id4">
-<h2>4.5.4 近似优化算法<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h2>4.5.4 近似优化算法<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
 <p>  很多实际应用问题都是NP-完全问题，这类问题很可能不存在多项式时间算法。一般而言NP-完全问题可采用以下三种方式处理。如果问题的输入规模较小，则可以利用搜索策略在指数时间内求解问题；如果输入规模较大，既可以利用随机算法在多项式时间内“高概率”地精确求解问题；也可以考虑在多项式时间内求得问题的一个“近似解”。</p>
 <p>  近似优化算法就是是指这种能够在多项式时间内给出优化问题的近似优化解的算法。近似算法不仅可用于近似求解NP-完全问题，也可用于近似求解复杂度较高的NP问题。</p>
 <p>  通常在生活中，有些问题没有必要找到最完美的解，常常是找到一个可以满足期望的解就可以了。比如赛车比赛，赛道上其实有很多路线可以到达终点，车手只需要找到一种可以赢得比赛的路线就可以了。</p>
 </section>
 <section id="id5">
-<h2>4.5.5 泡利算符<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<h2>4.5.5 泡利算符<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <p>  泡利算符是一组三个2×2的幺正厄米复矩阵，一般都以希腊字母  <span class="math notranslate nohighlight">\(\sigma\)</span> （西格玛）来表示，读作泡利  <span class="math notranslate nohighlight">\(x\)</span> ，泡利  <span class="math notranslate nohighlight">\(y\)</span> ，泡利  <span class="math notranslate nohighlight">\(z\)</span> 。</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\sigma_{\mathrm{x}}=\left[\begin{array}{ll} 0 &amp; 1 \\ 1 &amp; 0 \end{array}\right] \quad \sigma_{\mathrm{y}}=\left[\begin{array}{cc} 0 &amp; -\mathrm{i} \\ \mathrm{i} &amp; 0 \end{array}\right] \quad \sigma_{\mathrm{z}}=\left[\begin{array}{cc} 1 &amp; 0 \\ 0 &amp; -1 \end{array}\right]\end{split}\]</div>
@@ -494,7 +491,7 @@
 </div>
 </section>
 <section id="id6">
-<h2>4.5.6 哈密顿量<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<h2>4.5.6 哈密顿量<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
 <p>  对于一个物理系统，可以用哈密顿量来描述，其实哈密顿量在数学表示上就是一个矩阵，只不过这个矩阵有点特殊，它的本征值都是实数。</p>
 <p>  哈密顿量的本征向量描述对应的物理系统所处的各个本征态，本征值就是物理系统所处的本征态对应的能量。</p>
 <p>  对于一个问题，如果找到了它的哈密顿量，根据这个哈密顿量就可以求得它的本征态和本征能量，得到了本征态和本征能量就相当于解决了问题。</p>
@@ -507,26 +504,26 @@
 <p>  对于对角矩阵，它对角线上的每个元素都是该矩阵的本征值。其中1，0，0；0，1，0和0，0，1就是该对角矩阵的本征向量。</p>
 <p>  对于布尔变量a来说，它有两个状态a和非a，如果a表示真的话，那非a就表示假，假设用数字1来表示真，用数字0来表示假。则如表4.5.3：</p>
 <p class="centered">
-<strong>表4.5.3 布尔变量的状态及值</strong></p><img alt="../_images/表4.5.3.png" class="align-center" src="../_images/表4.5.3.png" />
+<strong>表4.5.3 布尔变量的状态及值</strong></p><img alt="../_images/%E8%A1%A84.5.3.png" class="align-center" src="../_images/%E8%A1%A84.5.3.png" />
 <p>  它有两个本征态 <span class="math notranslate nohighlight">\(|0\rangle\)</span> 和  <span class="math notranslate nohighlight">\(|1\rangle\)</span> ，这两个本征态对应的本征值为1和-1。如果用1表示布尔变量为真状态时的能量，-1表示布尔变量为假状态时的能量，那么泡利  <span class="math notranslate nohighlight">\(z\)</span> 就是布尔变量这个简单物理系统的哈密顿量形式。</p>
 <p><strong>逻辑表达式a∧b的哈密顿量</strong></p>
 <p>  逻辑与也叫做逻辑乘，逻辑与对应的哈密顿量可以表示成两个逻辑变量的哈密顿量之间的乘积。</p>
 <p>  假设给出a与b的真值表，如表4.5.4。当逻辑变量a和逻辑变量b都为true时，逻辑表达式a与b值为1，其它情况值都为0。</p>
 <p class="centered">
-<strong>表4.5.4 a与b的真值表</strong></p><img alt="../_images/表4.5.4.png" class="align-center" src="../_images/表4.5.4.png" />
+<strong>表4.5.4 a与b的真值表</strong></p><img alt="../_images/%E8%A1%A84.5.4.png" class="align-center" src="../_images/%E8%A1%A84.5.4.png" />
 <p>  哈密顿量的本征向量可以描述对应物理系统所处的各个本征态，哈密度量的本征值可以描述物理系统所处的本征态对应的能量。</p>
 <p>  对于逻辑表达式a与b这个简单系统来说，它有4个状态，第一个状态能量值为1，其它状态能量值为0；那么逻辑表达式a与b的哈密顿量，有4个本征态，本征态对应的能量分别为1,0,0,0。</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a} \land \mathrm{b}}=\left[\begin{array}{llll} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right]\end{split}\]</div>
 <p>  逻辑与也叫做逻辑乘，逻辑与对应的哈密顿量可以表示成两个逻辑变量的哈密顿量之间的乘积。如果用 <span class="math notranslate nohighlight">\(|0\rangle\)</span> 态来表示a状态和b状态，用 <span class="math notranslate nohighlight">\(|1\rangle\)</span> 态来表示非a状态和非b状态。令状态a和状态b的值为真。则逻辑表达式a与b的真值表如表4.5.5所示：</p>
 <p class="centered">
-<strong>表4.5.5 逻辑表达式a与b的真值表</strong></p><img alt="../_images/表4.5.5.png" class="align-center" src="../_images/表4.5.5.png" />
+<strong>表4.5.5 逻辑表达式a与b的真值表</strong></p><img alt="../_images/%E8%A1%A84.5.5.png" class="align-center" src="../_images/%E8%A1%A84.5.5.png" />
 <p><span class="math notranslate nohighlight">\(|0\rangle\)</span> 态对应的哈密顿量为 <span class="math notranslate nohighlight">\(\frac{I+\sigma^{2}}{2}\)</span> ，将变量a和b用其哈密顿量来替换，逻辑与用矩阵乘来替换，则逻辑表达式a与b的哈密顿量可以这样推导，对于a和b各用1个比特来表示，用索引值为0的比特来表示a，索引值为1的比特来表示b，表达式为：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a} \land \mathrm{b}}=\frac{\mathrm{I}+\sigma_{0}^{z}}{2} \cdot \frac{\mathrm{I}+\sigma_{1}^{z}}{2}=\left[\begin{array}{llll} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right]\end{split}\]</div>
 <p>  同理，如果用 <span class="math notranslate nohighlight">\(|1\rangle\)</span> 态来表示a状态和b状态，用 <span class="math notranslate nohighlight">\(|0\rangle\)</span> 态来表示非a状态和非b状态。则逻辑表达式a与b的真值表可以如表4.5.6所示：</p>
 <p class="centered">
-<strong>表4.5.6 逻辑表达式a与b的真值表</strong></p><img alt="../_images/表4.6.6.png" class="align-center" src="../_images/表4.6.6.png" />
+<strong>表4.5.6 逻辑表达式a与b的真值表</strong></p><img alt="../_images/%E8%A1%A84.6.6.png" class="align-center" src="../_images/%E8%A1%A84.6.6.png" />
 <p><span class="math notranslate nohighlight">\(|1 \rangle\)</span> 态对应的哈密顿量为 <span class="math notranslate nohighlight">\(\frac{I-\sigma^{2}}{2}\)</span> ，将变量a和b用哈密顿量来替换，逻辑与用矩阵乘来替换，则逻辑表达式a与b的哈密顿量推导形式为：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a} \land \mathrm{b}}=\frac{\mathrm{I}-\sigma_{0}^{z}}{2} \cdot \frac{\mathrm{I}-\sigma_{1}^{z}}{2}=\left[\begin{array}{llll} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array}\right]\end{split}\]</div>
@@ -536,20 +533,20 @@
 <div class="math notranslate nohighlight">
 \[\mathrm{a} \lor \mathrm{b}=\neg(\neg \mathrm{a} \wedge \neg \mathrm{b})\]</div>
 <p class="centered">
-<strong>表4.5.7 逻辑表达式a或b的真值表</strong></p><img alt="../_images/表4.5.7.png" class="align-center" src="../_images/表4.5.7.png" />
+<strong>表4.5.7 逻辑表达式a或b的真值表</strong></p><img alt="../_images/%E8%A1%A84.5.7.png" class="align-center" src="../_images/%E8%A1%A84.5.7.png" />
 <p>  根据状态和对应的能量，写出逻辑表达式a或b的哈密顿量，这个哈密顿量也有4个本征态，本征态对应的能量分别为1,1,1,0。</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a}{\mathrm{\lor} b}}=\left[\begin{array}{cccc} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right]\end{split}\]</div>
 <p>  同样假设用 <span class="math notranslate nohighlight">\(|0 \rangle\)</span> 态来表示a状态和b状态，用 <span class="math notranslate nohighlight">\(|1 \rangle\)</span> 态来表示非a状态和非b状态，令状态a和状态b的值为真。则逻辑表达式a或b的真值表如表4.5.8所示:</p>
 <p class="centered">
-<strong>表4.5.8 逻辑表达式a与b的真值表</strong></p><img alt="../_images/表4.5.8.png" class="align-center" src="../_images/表4.5.8.png" />
+<strong>表4.5.8 逻辑表达式a与b的真值表</strong></p><img alt="../_images/%E8%A1%A84.5.8.png" class="align-center" src="../_images/%E8%A1%A84.5.8.png" />
 <p><span class="math notranslate nohighlight">\(|1 \rangle\)</span> 态对应的哈密顿量为  <span class="math notranslate nohighlight">\(\frac{I-\sigma^{2}}{2}\)</span> ，将非a状态和非b状态用对应 <span class="math notranslate nohighlight">\(|1 \rangle\)</span> 的哈密顿量来替换，逻辑与用矩阵乘来替换，再取非就相当于用单位向量做减法，则逻辑表达式a或b的哈密顿量推导形式为：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a} \lor \mathrm{~b}}=\mathrm{I}-\frac{\mathrm{I}-\sigma_{0}^{2}}{2} \cdot \frac{\mathrm{I}-\sigma_{1}^{2}}{2}=\left[\begin{array}{llll} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right]\end{split}\]</div>
 <p>  从上述表达式不难发现，它与用状态及其能量写出来的哈密顿量形式一样。</p>
 <p>  同理，如果用 <span class="math notranslate nohighlight">\(|1 \rangle\)</span> 态来表示a状态和b状态，用 <span class="math notranslate nohighlight">\(|0 \rangle\)</span> 态来表示非a状态和非b状态。则逻辑表达式a或b的真值表如表4.5.9所示：</p>
 <p class="centered">
-<strong>表4.5.9 逻辑表达式a或b的真值表</strong></p><img alt="../_images/表4.5.9.png" class="align-center" src="../_images/表4.5.9.png" />
+<strong>表4.5.9 逻辑表达式a或b的真值表</strong></p><img alt="../_images/%E8%A1%A84.5.9.png" class="align-center" src="../_images/%E8%A1%A84.5.9.png" />
 <p><span class="math notranslate nohighlight">\(|0 \rangle\)</span> 态对应的哈密顿量为  <span class="math notranslate nohighlight">\(\frac{1+\sigma^{\pi}}{2}\)</span> , 同时将非a状态和非b状态用  <span class="math notranslate nohighlight">\(|0\rangle\)</span> 态对应的哈密顿量来替换，逻辑与用矩阵乘来替换，非操作相当于用单位向量进行减法操作，则逻辑 表达式a或b的哈密顿量形式也可以推导为:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a \lor b}}=\mathrm{I}-\frac{\mathrm{I}+\sigma_{0}^{2}}{2} \cdot \frac{\mathrm{I}+\sigma_{1}^{2}}{2}=\left[\begin{array}{llll} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array}\right]\end{split}\]</div>
@@ -557,19 +554,19 @@
 <p>  加法对应的哈密顿量可以表示为变量对应的哈密顿量进行加操作，所以a加b的哈密顿量等于变量a和变量b取值对应的哈密顿量之和。</p>
 <p>  假设a,b只能在0和1中进行取值，可以看到总共存在4种情况，当a取0，b取0的时候值为0，a取0，b取1的时候值为1，a取1，b取0的时候值为1，a取1，b取1的时候值为2，如表4.5.10所示：</p>
 <p class="centered">
-<strong>表4.5.10 4种情况</strong></p><img alt="../_images/表4.5.10.png" class="align-center" src="../_images/表4.5.10.png" />
+<strong>表4.5.10 4种情况</strong></p><img alt="../_images/%E8%A1%A84.5.10.png" class="align-center" src="../_images/%E8%A1%A84.5.10.png" />
 <p>  根据状态及其对应能量，对于这种状态比较少的情况，直接将它对应的哈密顿量写出，这个哈密顿量也有4个本征态，本征态对应的能量分别为0，1，1，2。</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a}+\mathrm{b}}=\left[\begin{array}{llll} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 2 \end{array}\right]\end{split}\]</div>
 <p>同样，可以各用 1 个比特来表示a和b的取值范围，如果用  <span class="math notranslate nohighlight">\(|0\rangle\)</span> 态来表示a和b取值为 1 时的状态，用  <span class="math notranslate nohighlight">\(|1\rangle\)</span> 态表示  <span class="math notranslate nohighlight">\(a\)</span> 和b取值为 0 时的状态，列出所有情况如表 4.5.11 所示:</p>
 <p class="centered">
-<strong>表4.5.11 所有情况</strong></p><img alt="../_images/表4.5.11.png" class="align-center" src="../_images/表4.5.11.png" />
+<strong>表4.5.11 所有情况</strong></p><img alt="../_images/%E8%A1%A84.5.11.png" class="align-center" src="../_images/%E8%A1%A84.5.11.png" />
 <p>  那么，逻辑表达式a+b的哈密顿量形式为：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a}+\mathrm{b}}=\frac{\mathrm{I}+\sigma_{0}^{2}}{2}+\frac{\mathrm{I}+\sigma_{1}^{z}}{2}=\left[\begin{array}{llll} 2 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right]\end{split}\]</div>
 <p>  同理，用  <span class="math notranslate nohighlight">\(|1\rangle\)</span> 态来表示a和b取值为 1 时的状态，用  <span class="math notranslate nohighlight">\(|0\rangle\)</span> 态表示a和b，取值为0时的状态，如表4.5.12所示：</p>
 <p class="centered">
-<strong>表4.5.12 所有情况</strong></p><img alt="../_images/表4.5.12.png" class="align-center" src="../_images/表4.5.12.png" />
+<strong>表4.5.12 所有情况</strong></p><img alt="../_images/%E8%A1%A84.5.12.png" class="align-center" src="../_images/%E8%A1%A84.5.12.png" />
 <p>  那么，逻辑表达式a+b的哈密顿量形式为：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathrm{H}_{\mathrm{a}+\mathrm{b}}=\frac{\mathrm{I}-\sigma_{0}^{z}}{2}+\frac{\mathrm{I}-\sigma_{1}^{z}}{2}=\left[\begin{array}{llll} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 2 \end{array}\right]\end{split}\]</div>
@@ -597,7 +594,7 @@
 \[\begin{split}H=\left[\begin{array}{llll} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}\right]\end{split}\]</div>
 <p>  对于这个简单的系统，可以发现，它其实对应着一个异或表达式，异或表达式的真值表如表4.5.13所示：</p>
 <p class="centered">
-<strong>表4.5.13 异或表达式的真值表</strong></p><img alt="../_images/表4.5.13.png" class="align-center" src="../_images/表4.5.13.png" />
+<strong>表4.5.13 异或表达式的真值表</strong></p><img alt="../_images/%E8%A1%A84.5.13.png" class="align-center" src="../_images/%E8%A1%A84.5.13.png" />
 <p>  当变量a和变量b取不同值时，异或的结果为1，取相同值时，异或的结果为0。</p>
 <p>  a异或b也可以表示成两个逻辑与运算之和。</p>
 <div class="math notranslate nohighlight">
@@ -627,7 +624,7 @@
 \[\{ ^{\prime \prime} \text { Z3 Z0}^{\prime \prime} \text{} ,1\}\]</div>
 </section>
 <section id="id7">
-<h2>4.5.7 算法原理<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
+<h2>4.5.7 算法原理<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
 <p><strong>绝热量子计算</strong></p>
 <p>  绝热量子计算（Adiabatic quantum computation）是量子计算的一种形式，它依赖于绝热定理进行计算。 首先，对于一个特定的问题，找到一个（可能复杂的）哈密顿量，其基态描述了该问题的解决方案；然后，准备一个具有简单哈密顿量的系统并初始化为基态；最后，简单的哈密顿量绝热地演化为期望的复杂哈密顿量。 根据绝热定理，系统保持在基态，因此最后系统的状态描述了问题的解决方案， 绝热量子计算已经被证明在线路模型中与传统的量子计算是多项式等价的。</p>
 <p>  绝热量子计算是通过以下过程解决特定问题和其他组合搜索问题。通常这种问题就是寻找一种状态满足  <span class="math notranslate nohighlight">\(C_1 \wedge C_2 \wedge^{\cdots} \wedge C_{m}\)</span> , 该表达式包含可满足条件的M个子问题，每个子问题  <span class="math notranslate nohighlight">\(\mathrm{C}{i}\)</span> 值为True或False，并且可能包含n位，这里的每一位都是一个变量  <span class="math notranslate nohighlight">\(\mathrm{x}{j} \in{0,1}\)</span> 所以  <span class="math notranslate nohighlight">\(\mathrm{C}{i}\)</span> 是一个关于  <span class="math notranslate nohighlight">\(\mathrm{x}{1}, \mathrm{x}{2}, \cdots, \mathrm{x}{n}\)</span> 的布尔值函数，绝热量子算法利用量子绝热演化解决了这类问题。它以初始哈密顿量  <span class="math notranslate nohighlight">\(\mathrm{H}_{B}\)</span> 开始:</p>

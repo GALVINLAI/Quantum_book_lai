@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.1 QPanda &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -122,8 +125,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>2.1 QPanda</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">2.1 QPanda</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/附录2量子编程工具的安装与配置.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -134,17 +137,13 @@
            <div itemprop="articleBody">
              
   <section id="qpanda">
-<h1>2.1 QPanda<a class="headerlink" href="#qpanda" title="Permalink to this heading">¶</a></h1>
+<h1>2.1 QPanda<a class="headerlink" href="#qpanda" title="Link to this heading">¶</a></h1>
 <p>​  一种功能齐全，运行高效的量子软件开发工具包</p>
 <p>​  QPanda 2是由本源量子开发的开源量子计算框架，它可以用于构建、运行和优化量子算法。QPanda 2作为本源量子计算系列软件的基础库，为QRunes、Qurator、量子计算服务提供核心部件。</p>
 <p><strong>编译环境</strong></p>
 <p>​  QPanda 2是以C++为宿主语言，其对系统的环境要求如表附2.1.1：</p>
 <p class="centered">
 <strong>表附2.1.1 环境要求</strong></p><table class="docutils align-center">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>software</strong></p></td>
 <td><p><strong>version</strong></p></td>
@@ -167,7 +166,7 @@
 </div>
 <p>​  对于一些为安装git的伙伴来说，也可以直接通过浏览器去下载QPanda 2， 具体的操作步骤如下：</p>
 <p>​  1.在浏览器中输入 <a class="reference external" href="https://github.com/OriginQ/QPanda">https://github.com/OriginQ/QPanda</a> 2 ，进入网页会看到：</p>
-<img alt="../_images/图附2.1.1.jpg" class="align-center" src="../_images/图附2.1.1.jpg" />
+<img alt="../_images/%E5%9B%BE%E9%99%842.1.1.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.1.1.jpg" />
 <p class="centered">
 <strong>图附2.1.1 Github界面</strong></p><p>​  2.点击 Clone or download 看到界面：</p>
 <img alt="../_images/wps1252.jpg" class="align-center" src="../_images/wps1252.jpg" />
@@ -401,17 +400,13 @@
 </div>
 </section>
 <section id="pyqpanda">
-<h1>2.2 pyQPanda<a class="headerlink" href="#pyqpanda" title="Permalink to this heading">¶</a></h1>
+<h1>2.2 pyQPanda<a class="headerlink" href="#pyqpanda" title="Link to this heading">¶</a></h1>
 <p>系统配置和安装</p>
 <p>​  我们通过pybind11工具，以一种直接和简明的方式，对QPanda2中的函数、类进行封装，并且提供了几乎完美的映射功能。 封装部分的代码在QPanda2编译时会生成为动态库，从而可以作为Python的包引入。</p>
 <p>系统配置</p>
 <p>​  pyqpanda是以C++为宿主语言，其对系统的环境要求如表附2.2.1：</p>
 <p class="centered">
 <strong>表附2.2.1 环境要求</strong></p><table class="docutils align-center">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>software</strong></p></td>
 <td><p><strong>version</strong></p></td>
@@ -435,9 +430,9 @@
 </div>
 </section>
 <section id="vqnet">
-<h1>2.3 VQNet<a class="headerlink" href="#vqnet" title="Permalink to this heading">¶</a></h1>
+<h1>2.3 VQNet<a class="headerlink" href="#vqnet" title="Link to this heading">¶</a></h1>
 <section id="vqnet-python">
-<h2>2.3.1 VQNet python包安装<a class="headerlink" href="#vqnet-python" title="Permalink to this heading">¶</a></h2>
+<h2>2.3.1 VQNet python包安装<a class="headerlink" href="#vqnet-python" title="Link to this heading">¶</a></h2>
 <p>​  我们提供了Linux,Windows,MacOS上的python预编译包供安装，需要python==3.8。还需要numpy&gt;=1.18.5,pyqpanda&gt;=3.7.8。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyvqnet</span>
 </pre></div>
@@ -451,7 +446,7 @@
 </div>
 </section>
 <section id="id1">
-<h2>2.3.2  VQNet 的一个简单例子<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>2.3.2  VQNet 的一个简单例子<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <p>​  这里使用VQNet的经典神经网络模块以及量子模块完成一个机器学习模型的整体流程的例子介绍。该例子参考 [Data re-uploading for a universal quantum classifier](<a class="reference external" href="https://arxiv.org/abs/1907.02085">https://arxiv.org/abs/1907.02085</a>) 。 量子机器学习中的量子计算模块一般有如下几个部分：</p>
 <p>​  （1）编码线路（Encoder），用于将经典数据编码到量子数据； （2）可变参数的量子线路（Ansatz），用于训练带参量子门中的参数； （3）测量模块(Measurement)，用于检测测量值（也就是某个量子比特的量子态在某些轴上的投影）。</p>
 <p>​  量子计算模块与经典神经网络的运算模块一样是可微分的，是量子经典神经网络混合模型的理论基础。 VQNet支持将量子计算模块与经典计算模块（例如：卷积，池化，全连接层，激活函数等）一起构成混合机器学习模型，提供多种优化算法优化参数。</p>
@@ -510,7 +505,7 @@
 </pre></div>
 </div>
 <p>​  本例子中机器学习的任务是对随机生成的数据根据进行二分类，其中下图是该数据样例，零为圆点，半径为1以内红色的二维点为一类，蓝色的点为另一类。</p>
-<a class="reference internal image-reference" href="../_images/图附2.3.1.png"><img alt="../_images/图附2.3.1.png" class="align-center" src="../_images/图附2.3.1.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.3.1.png"><img alt="../_images/%E5%9B%BE%E9%99%842.3.1.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.3.1.png" style="width: 350px;" /></a>
 <p class="centered">
 <strong>图附2.3.1 数据样例</strong></p><p>​  训练测试代码流程：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#导入必须的库和函数</span>
@@ -670,19 +665,19 @@
 <span class="n">test_accuracy</span><span class="p">:</span><span class="mf">0.826</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/图附2.3.2.png"><img alt="../_images/图附2.3.2.png" class="align-center" src="../_images/图附2.3.2.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.3.2.png"><img alt="../_images/%E5%9B%BE%E9%99%842.3.2.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.3.2.png" style="width: 750px;" /></a>
 <p class="centered">
 <strong>图附2.3.2 训练测试结果图</strong></p></section>
 </section>
 <section id="qurator">
-<h1>2.4 Qurator<a class="headerlink" href="#qurator" title="Permalink to this heading">¶</a></h1>
+<h1>2.4 Qurator<a class="headerlink" href="#qurator" title="Link to this heading">¶</a></h1>
 <p>  一种基于VS Code的量子程序开发工具。</p>
 <p>   qurator-vscode 是本源量子推出的一款可以开发量子程序的 VS Code 插件。其支持 QRunes2 语言量子程序开发，并支持 Python 和 C++ 语言作为经典宿主语言。</p>
 <p>  在 qurator-vscode 中，量子程序的开发主要分为编写和运行两个部分。</p>
 <p>  ·编写程序：插件支持模块化编程，在不同的模块实现不同的功能，其中量子程序的编写主要在 qcodes 模块中；</p>
 <p>  ·程序运行：即是收集结果的过程，插件支持图表化数据展示，将运行结果更加清晰的展现在您的面前。</p>
 <section id="id2">
-<h2>2.4.1 设计思想<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>2.4.1 设计思想<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>​  考虑到目前量子程序的开发离不开经典宿主语言的辅助，qurator-vscode 插件设计时考虑到一下几点：</p>
 <p>    （1）模块编程：</p>
 <p>​  qurator-vscode 插件支持模块编程，将整体程序分为三个模块：settings、qcodes 和 script 模块。在不同的模块完成不同的功能。 在 settings 模块中，您可以进行宿主语言类型、编译还是运行等设置；在 qcodes 模块中， 您可以编写 QRunes2 语言程序； 在 script 模块中，您可以编写相应的宿主语言程序。</p>
@@ -692,7 +687,7 @@
 <p>​  qurator-vscode 插件提供图形化的结果展示，程序运行后会展示 json 格式的运行结果，您可以点击运行结果，会生成相应的柱状图，方便您对运行结果的分析。</p>
 </section>
 <section id="id3">
-<h2>2.4.2 准备工作<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>2.4.2 准备工作<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>​  使用 qurator-vscode 插件之前需要做一些准备工作，以确保量子程序能够正确的运行。</p>
 <p>​  需要依赖的运行环境有：</p>
 <p>​  ​  ​  ​·Python (版本 3.6.4 - 3.6.8)</p>
@@ -702,18 +697,18 @@
 <p>​  其中，pip 负责下载宿主语言为 Python 时程序运行所依赖的包。Microsoft Visual C++ Redistributable 和 MinGw-w64 是宿主语言为 C++ 时程序运行所依赖的包。</p>
 <p>​    （1）安装插件</p>
 <p>​  首先需要您安装 [VS Code](<a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>) ，然后打开 VS Code 安装 qurator-vscode 插件： 使用 Ctrl + Shift + X 快捷键打开插件页面，或者您可以在最左侧栏找到 Extensions 点击进入，然后输入 qurator-vscode 来搜索插件，点击 Install 按钮进行插件的安装。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.1.jpg"><img alt="../_images/图附2.4.1.jpg" class="align-center" src="../_images/图附2.4.1.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.1.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.1.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.1.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.1 插件安装</strong></p><p>​  ​  ​（2）检测运行环境</p>
 <p>​​  插件安装好之后，您可以创建以 .qrunes 结尾的文件，此时插件会自动检测是否存在程序运行所依赖的环境。您也可以自己检测程序运行环境，使用 Ctrl + Shift + P 快捷键打开 VS Code 命令行， 输入 qurator-vscode 时您可以看到 qurator-vscode: Check Qurator VSCode Extension dependencies 选择项，点击此项就可以进行运行环境的检测。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.2.jpg"><img alt="../_images/图附2.4.2.jpg" class="align-center" src="../_images/图附2.4.2.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.2.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.2.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.2.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.2 运行环境检测</strong></p><p>​​  检测到运行时所需环境，会在右下角展示软件及版本号：</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.3.jpg"><img alt="../_images/图附2.4.3.jpg" class="align-center" src="../_images/图附2.4.3.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.3.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.3.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.3.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.3.3 软件及版本号</strong></p></section>
 <section id="id4">
-<h2>2.4.3 快速入门<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h2>2.4.3 快速入门<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
 <p>​​  在做好准备工作之后，下面就可以编写属于您自己的量子程序了。</p>
 <p>​​  ​​  （1）项目文件夹中启动 VS Code</p>
 <p>​​​  在命令提示符或终端上，创建一个名为 “test” 的空文件夹，切换到该文件夹，然后输入命令 code . 在该文件夹中打开 VS Code：</p>
@@ -725,53 +720,53 @@
 <p>​​​  或者，您可以点击运行 VS Code，然后点击 “File” &gt; “Open File…” 打开项目文件夹。在文件夹中启动 VS Code，该文件夹将成为您的“工作区”。您可以在 .vscode/settings.json 文件中更改工作区的相关设置。</p>
 <p>​​​  ​​​  （2）创建一个 qrunes 文件</p>
 <p>​​​  在文件资源管理器工具栏中，单击 “test” 文件夹上的 “New File” 按钮，并命名该文件为 qurator_test.qrunes。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.4.jpg"><img alt="../_images/图附2.4.4.jpg" class="align-center" src="../_images/图附2.4.4.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.4.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.4.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.4.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.4 创建 qrunes 文件</strong></p><p>​​​  ​​​  （3）编写量子程序</p>
 <p>​​​  qrunes 文件创建完成之后，便可以编写量子程序了。整个量子程序分为三个部分：settings、qcodes 和 script 三个模块。</p>
 <p>​​​  其中，settings 模块中可以设置宿主语言，编译还是运行；qcodes 模块中可以编写 QRunes2 量子语言代码； script 模块中可以编写宿主语言代码，目前支持 Python 和 C++ 两种宿主语言。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.5.jpg"><img alt="../_images/图附2.4.5.jpg" class="align-center" src="../_images/图附2.4.5.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.5.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.5.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.5.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.5 编写量子程序</strong></p><p>​​​  ​​​  （4）编译运行</p>
 <p>​​​  点击右上方 Run this QRunes 运行程序，或者使用命令提示符 qurator-vscode: Run this QRunes 来运行程序(快捷键 F5)：</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.6.1.jpg"><img alt="../_images/图附2.4.6.1.jpg" class="align-center" src="../_images/图附2.4.6.1.jpg" style="width: 500px;" /></a>
-<a class="reference internal image-reference" href="../_images/图附2.4.6.2.jpg"><img alt="../_images/图附2.4.6.2.jpg" class="align-center" src="../_images/图附2.4.6.2.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.6.1.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.6.1.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.6.1.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.6.2.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.6.2.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.6.2.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.6 编译运行</strong></p><p>​​​  上述示例程序的运行结果如图附2.3.7：</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.7.jpg"><img alt="../_images/图附2.4.7.jpg" class="align-center" src="../_images/图附2.4.7.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.7.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.7.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.7.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.7 运行结果</strong></p></section>
 <section id="id5">
-<h2>2.4.4 功能介绍<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<h2>2.4.4 功能介绍<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <p>​​​
 ​​​  相信在快速入门步骤之后，您已大体了解插件的整体功能，下面将介绍您在编辑量子程序过程中插件提供的辅助功能：</p>
 <p>​​​  ​​​  （1）自动补全</p>
 <p>​​​  对于 QRunes2 语言内设的关键字可以智能提示，根据输入的字符列为您提供当前上下文中适用的最相关符号列表并提示其功能， 以便您可以更快地选择。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.8.jpg"><img alt="../_images/图附2.4.8.jpg" class="align-center" src="../_images/图附2.4.8.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.8.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.8.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.8.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.8 自动补全</strong></p><p>​​​​  ​​​  （2）验证提示</p>
 <p>​​​​  对于输入进行验证并提示。每当插件检测到您编写的代码发生语法错误时，编辑器中会显示红色波浪线， 鼠标放上去可看到一系列错误信息，您可以准确定位错误发生的位置。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.9.jpg"><img alt="../_images/图附2.4.9.jpg" class="align-center" src="../_images/图附2.4.9.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.9.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.9.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.9.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.9 验证提示</strong></p><p>​​​​  ​​​​  （3）高亮展示</p>
 <p>​​​​​​​  不同的模块有不同的颜色划分，您可以清晰地编写每一个模块的代码，一目了然，快速开发。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.10.jpg"><img alt="../_images/图附2.4.10.jpg" class="align-center" src="../_images/图附2.4.10.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.10.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.10.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.10.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.10 高亮展示</strong></p><p>​​​​  ​​​​  （4）悬浮提示</p>
 <p>​​​​  QRunes2 语言中的方法、变量都有详细的解释及用法。每当您编写 QRunes2 语言内设关键字时， 将鼠标放在该关键字上，编辑器将会显示该关键字的功能信息。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.11.jpg"><img alt="../_images/图附2.4.11.jpg" class="align-center" src="../_images/图附2.4.11.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.11.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.11.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.11.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.11 悬浮提示</strong></p><p>​​​​  ​​​​  （5）智能片段</p>
 <p>​​​​  智能片段功能是指用户输入简短的触发指令而生成完整的代码片段，在本插件中内置了自定义代码片段， 可帮助您整理一些重复性代码，提高开发效率。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.12.jpg"><img alt="../_images/图附2.4.12.jpg" class="align-center" src="../_images/图附2.4.12.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.12.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.12.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.12.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.12 智能片段</strong></p><p>​​​​  ​​​​  （6）语言切换</p>
 <p>​​​​  目前 QRunes2 语言可以支持 Python 及 C++ 宿主语言，您可以在 settings 模块的 language 关键字来设置 所需支持的语言类型，就可以在script模块编写相应语言的代码。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.13.jpg"><img alt="../_images/图附2.4.13.jpg" class="align-center" src="../_images/图附2.4.13.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.13.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.13.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.13.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.13 语言切换</strong></p><p>​​​​  ​​​​  （7）编译运行</p>
 <p>​​​​  运行 QRunes2 语言代码，编译器会根据设定的语言去编译该代码，从而实现不同的语言编写生成相同的结构。</p>
-<a class="reference internal image-reference" href="../_images/图附2.4.14.jpg"><img alt="../_images/图附2.4.14.jpg" class="align-center" src="../_images/图附2.4.14.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附2.4.14.jpg"><img alt="../_images/%E5%9B%BE%E9%99%842.4.14.jpg" class="align-center" src="../_images/%E5%9B%BE%E9%99%842.4.14.jpg" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附2.4.14 编译运行</strong></p></section>
 </section>

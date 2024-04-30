@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.1 ChemiQ化学软件的安装 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -28,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -110,8 +113,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>3.1 ChemiQ化学软件的安装</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3.1 ChemiQ化学软件的安装</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/附录3量子化学工具的安装与使用.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -122,64 +125,60 @@
            <div itemprop="articleBody">
              
   <p>  ChemiQ是在量子计算机或虚拟机上模拟化学分子结构和性质的仿真软件——也是全球首款运用量子算法模拟的仿真软件——接入量子计算机计算速度呈指数增长。ChemiQ利用Jordan-Wigner，Parity等方法将二次量子化的Fermion的Hamiltonian算符转化（mapping）成Qubit的Hamiltonian算符（量子计算机识别的算符），算符间的转换是量子计算模拟化学过程的第一步，不同的转化方法对应着不同的Qubit信息，研究出所转化的算符少的mapping，相应的计算少，可大大简化计算；使用Unitary Coupled Cluster（简称UCC）等拟设构造模拟量子电路，分别代表不同的电路模型，所包含的参数数目和线路深度也不尽相同，构造出参数少、线路浅的线路拟设是量子计算模拟的关键，使得复杂的化学过程得到有效模拟；再结合量子相位评估（QPE），变分量子本征求解（VQE）算法，或量子虚时演化（QITE）算法模拟分子哈密顿量的期望值，进一步预测分子性质。这些算法不仅能保证量子态的相干性，其计算结果还能达到化学精度，在可预见的未来，有着极大的应用前景和优势。</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.0.png"><img alt="../_images/图附3.1.0.png" class="align-center" src="../_images/图附3.1.0.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.0.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.0.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.0.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.1.1 ChemiQ软件</strong></p><section id="chemiq">
-<h1>3.1 ChemiQ化学软件的安装<a class="headerlink" href="#chemiq" title="Permalink to this heading">¶</a></h1>
+<h1>3.1 ChemiQ化学软件的安装<a class="headerlink" href="#chemiq" title="Link to this heading">¶</a></h1>
 <p>  1、登录本源量子云官网图附3.1.1.png（<a class="reference external" href="https://qcloud.originqc.com.cn/">https://qcloud.originqc.com.cn/</a>），选择“应用推广云”，如图附3.1.2 所示；选择“生物医药”方向，点击“了解详情”如图附3.1.3所示；点击“Windows进行下载”，如图附3.1.4所示。（直达页面：<a class="reference external" href="https://qcloud.originqc.com.cn/chemistryIntroduce">https://qcloud.originqc.com.cn/chemistryIntroduce</a>）</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.1.png"><img alt="../_images/图附3.1.1.png" class="align-center" src="../_images/图附3.1.1.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.1.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.1.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.1.png" style="width: 500px;" /></a>
 <p class="centered">
-<strong>图附3.1.2 选择“应用推广云”</strong></p><a class="reference internal image-reference" href="../_images/图附3.1.2.png"><img alt="../_images/图附3.1.2.png" class="align-center" src="../_images/图附3.1.2.png" style="width: 500px;" /></a>
+<strong>图附3.1.2 选择“应用推广云”</strong></p><a class="reference internal image-reference" href="../_images/图附3.1.2.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.2.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.2.png" style="width: 500px;" /></a>
 <p class="centered">
-<strong>图附3.1.3 选择“生物医药”</strong></p><a class="reference internal image-reference" href="../_images/图附3.1.3.png"><img alt="../_images/图附3.1.3.png" class="align-center" src="../_images/图附3.1.3.png" style="width: 500px;" /></a>
+<strong>图附3.1.3 选择“生物医药”</strong></p><a class="reference internal image-reference" href="../_images/图附3.1.3.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.3.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.3.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.1.4 下载</strong></p><p>  2、下载完成后，双击安装该软件，点击“我同意”；</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.4.png"><img alt="../_images/图附3.1.4.png" class="align-center" src="../_images/图附3.1.4.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.4.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.4.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.4.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.1.5 点击“我同意”</strong></p><p>  3、然后点击“下一步”；</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.5.png"><img alt="../_images/图附3.1.5.png" class="align-center" src="../_images/图附3.1.5.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.5.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.5.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.5.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.1.6 下一步</strong></p><p>  4、再安装到默认目录，点击“安装”；</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.6.png"><img alt="../_images/图附3.1.6.png" class="align-center" src="../_images/图附3.1.6.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.6.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.6.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.6.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.1.7 点击“安装”</strong></p><p>​  5、安装完成后，运行该软件。</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.7.png"><img alt="../_images/图附3.1.7.png" class="align-center" src="../_images/图附3.1.7.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.7.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.7.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.7.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.1.8 安装完成</strong></p></section>
 <section id="id1">
-<h1>3.2 ChemiQ软件应用示例<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>3.2 ChemiQ软件应用示例<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <p>​  1、 新建项目。先新建一个项目名称——test H2，然后是填好创建人、计算模式、保存路径和项目描述，最后点击确定。</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.8.bmp"><img alt="../_images/图附3.1.8.bmp" class="align-center" src="../_images/图附3.1.8.bmp" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.8.bmp"><img alt="../_images/%E5%9B%BE%E9%99%843.1.8.bmp" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.8.bmp" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.2.1 新建项目</strong></p><p>​  2、 主界面。该软件左侧显示的是项目下的任务列表；左下显示的是项目或者任务详情；右侧显示分为上下两部分，上部分为分子模型，下部分为结果展示，可上下拖动调节大小。</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.9.bmp"><img alt="../_images/图附3.1.9.bmp" class="align-center" src="../_images/图附3.1.9.bmp" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.9.bmp"><img alt="../_images/%E5%9B%BE%E9%99%843.1.9.bmp" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.9.bmp" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.2.2 主页面</strong></p><p>​  3、 分子建模。以氢分子势能曲线为例，首先是构建分子模型。点击设置-分子模型，或者工具栏中图标构建分子模型。在这里可使用构建分子快捷工具，如右侧弹出框。</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.10.bmp"><img alt="../_images/图附3.1.10.bmp" class="align-center" src="../_images/图附3.1.10.bmp" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.10.bmp"><img alt="../_images/%E5%9B%BE%E9%99%843.1.10.bmp" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.10.bmp" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.2.3 分子建模</strong></p><p>​  4、 配置参数。在参数配置框中选择计算类型——势能曲线，基组、电荷、自旋多重度可根据用户对应设置，在这里以STO-3G基组模拟氢分子PES；扫描坐标选择氢分子中键长距离为变量，设置对应的节点个数和扫描区间；映射、拟设和优化器对应选择如下图所示：</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.11.bmp"><img alt="../_images/图附3.1.11.bmp" class="align-center" src="../_images/图附3.1.11.bmp" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.11.bmp"><img alt="../_images/%E5%9B%BE%E9%99%843.1.11.bmp" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.11.bmp" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.2.4 配置参数</strong></p><p>​  5、任务详情。左下部分显示任务的参数详情，如计算结果中展示的计算列表，其中往下拉会显示20个节点任务；此外为了便于显示，可点击视图中便捷工具，如图展示是分子模型中的元素名称和元素编号。</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.12.bmp"><img alt="../_images/图附3.1.12.bmp" class="align-center" src="../_images/图附3.1.12.bmp" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.12.bmp"><img alt="../_images/%E5%9B%BE%E9%99%843.1.12.bmp" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.12.bmp" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.2.5 任务详情</strong></p><p>​  6、 计算完成。可以看到计算结果已经展示出来，同时也可以看到每个氢分子坐标计算得到能量如下：</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.13.bmp"><img alt="../_images/图附3.1.13.bmp" class="align-center" src="../_images/图附3.1.13.bmp" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.13.bmp"><img alt="../_images/%E5%9B%BE%E9%99%843.1.13.bmp" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.13.bmp" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.2.6 计算完成</strong></p><p>​  7、 结果展示。势能曲线中可点击单个节点进入结果详情中，或者点击计算列表/势能曲线切换结果展示。</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.14.bmp"><img alt="../_images/图附3.1.14.bmp" class="align-center" src="../_images/图附3.1.14.bmp" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.14.bmp"><img alt="../_images/%E5%9B%BE%E9%99%843.1.14.bmp" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.14.bmp" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.2.7 结果展示</strong></p></section>
 <section id="id2">
-<h1>3.3  ChemiQ接口介绍与使用<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h1>
+<h1>3.3  ChemiQ接口介绍与使用<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h1>
 <p><strong>使用封装的ChemiQ计算接口进行实现</strong></p>
 <p>  表附3.3.1，列出的是ChemiQ封装的计算接口：</p>
 <p class="centered">
 <strong>表附3.3.1</strong></p><table class="docutils align-center">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>接口名称</strong></p></td>
 <td><p><strong>描述</strong></p></td>
@@ -297,11 +296,11 @@
 </pre></div>
 </div>
 <p>​  获取优化后的能量，绘制曲线图。这条曲线就是优化得到的氢分子在不同距离下对应的基态能量：</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.16.png"><img alt="../_images/图附3.1.16.png" class="align-center" src="../_images/图附3.1.16.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.16.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.16.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.16.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.3.1 氢分子在不同距离下对应的基态能量</strong></p></section>
 <section id="vqe">
-<h1>3.4 非梯度下降法实现VQE算法代码示例<a class="headerlink" href="#vqe" title="Permalink to this heading">¶</a></h1>
+<h1>3.4 非梯度下降法实现VQE算法代码示例<a class="headerlink" href="#vqe" title="Link to this heading">¶</a></h1>
 <p>​  首先，导入pyQPanda和psi4_wrapper中的所有模块，以及一些其它组件模块准备。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="kn">from</span> <span class="nn">pyqpanda</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="mf">2.</span><span class="kn">from</span> <span class="nn">psi4_wrapper</span> <span class="kn">import</span> <span class="o">*</span>
@@ -645,7 +644,7 @@
 </pre></div>
 </div>
 <p>​  该示例对应的输出结果如下，曲线图是氢分子在不同距离下对应的基态能量：</p>
-<a class="reference internal image-reference" href="../_images/图附3.1.15.png"><img alt="../_images/图附3.1.15.png" class="align-center" src="../_images/图附3.1.15.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/图附3.1.15.png"><img alt="../_images/%E5%9B%BE%E9%99%843.1.15.png" class="align-center" src="../_images/%E5%9B%BE%E9%99%843.1.15.png" style="width: 500px;" /></a>
 <p class="centered">
 <strong>图附3.3.2 氢分子在不同距离下对应的基态能量</strong></p></section>
 

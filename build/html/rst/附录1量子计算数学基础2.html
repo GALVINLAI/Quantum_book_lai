@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1.3 向量空间 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -116,8 +119,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>1.3 向量空间</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">1.3 向量空间</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/附录1量子计算数学基础2.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,7 +131,7 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>1.3 向量空间<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>1.3 向量空间<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <p>​  学习量子计算，要对量子力学有所了解，而量子力学是由希尔伯特空间来描述的，希尔伯特空间又是向量空间，因此首先要来介绍向量空间（vector spaces）[2,4,6,8]。</p>
 <p>​  向量空间本质上是一个由向量组成的集合，然后引进一些运算规则。那什么是向量呢？向量相对数量来说的，数量是只有大小的量，而向量不仅有大小而且还有方向的量。有时，向量也称为矢量。可以认为向量是数量的一个自然的扩充。</p>
 <p>​  假设有一个数域 <span class="math notranslate nohighlight">\(K\)</span> （集合  <span class="math notranslate nohighlight">\(K\)</span> 中任意两个元素的和、差、积、商（除数不为0）还属于集合 <span class="math notranslate nohighlight">\(K\)</span> ，称该集合为数域 <span class="math notranslate nohighlight">\(K\)</span> ），自然想到用直积将数域 <span class="math notranslate nohighlight">\(K\)</span> 进行扩充，n个数域 <span class="math notranslate nohighlight">\(K\)</span> 的直积可以表示为</p>
@@ -146,7 +149,7 @@
 <p>​  其中  <span class="math notranslate nohighlight">\(\Longleftrightarrow\)</span> 表示”等价于”。 规定  <span class="math notranslate nohighlight">\(K^{n}\)</span> 中任意两向量  <span class="math notranslate nohighlight">\(|u\rangle\)</span> 、 <span class="math notranslate nohighlight">\(|v\rangle\)</span> 的加法运算为两向量对应分量分别做普通加法，即：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}|u\rangle+|v\rangle=\left[\begin{array}{c} u_{1} \\ u_{2} \\ \vdots \\ u_{n} \end{array}\right]+\left[\begin{array}{c} v_{1} \\ v_{2} \\ \vdots \\ v_{n} \end{array}\right]:=\left[\begin{array}{c} u_{1}+v_{1} \\ u_{2}+v_{2} \\ \vdots \\ u_{n}+v_{n} \end{array}\right]\end{split}\]</div>
-<p>  规定数量  <span class="math notranslate nohighlight">\(k \in K\)</span> 与向量  <span class="math notranslate nohighlight">\(|u\rangle \in K^{n}\)</span> 之间的数乘运算为数量 <span class="math notranslate nohighlight">\(k\)</span> 的每一个分量分别做普通乘法，即：</p>
+<p>  规定数量  <span class="math notranslate nohighlight">\(k \in K\)</span> 与向量  <span class="math notranslate nohighlight">\(|u\rangle \in K^{n}\)</span> 之间的数乘运算为数量 <span class="math notranslate nohighlight">\(k`与  :math:`|u\rangle\)</span> 的每一个分量分别做普通乘法，即：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}k|u\rangle:=\left[\begin{array}{c} k u_{1} \\ k u_{2} \\ \vdots \\ k u_{n} \end{array}\right]\end{split}\]</div>
 <p>​  设  <span class="math notranslate nohighlight">\(V \equiv K^{n}\)</span> ， 根据数域的性质，可以验证，对任意的  <span class="math notranslate nohighlight">\(| {u}\rangle\)</span> , <span class="math notranslate nohighlight">\(| {v}\rangle\)</span> , <span class="math notranslate nohighlight">\(| {w}\rangle \in V\)</span> ，任意的  <span class="math notranslate nohighlight">\(\alpha, \beta \in K\)</span> 满足以下运算法 则</p>
@@ -179,7 +182,7 @@
 <p>  (2)  <span class="math notranslate nohighlight">\(| {u}\rangle \in U, k \in K \Rightarrow k| {u}\rangle \in U\)</span> ,</p>
 <p>​  则称  <span class="math notranslate nohighlight">\(U\)</span> 为  <span class="math notranslate nohighlight">\(K^{n}\)</span> 的一个线性子空间，简称为子空间 (subspace)。</p>
 <section id="id2">
-<h2>1.3.1 线性无关与基<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>1.3.1 线性无关与基<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>​  若想研究数域 <span class="math notranslate nohighlight">\(K\)</span> 上向量空间V的结构特征，根据向量空间的定义，只能从V的向量的加法以及数乘这两种运算开始。对于V中的一组向量  <span class="math notranslate nohighlight">\(\{|v_{1}\rangle,|v_{2}\rangle, \cdots,|v_{s}\rangle\}\)</span> ，数域 <span class="math notranslate nohighlight">\(K\)</span> 中的一组元素  <span class="math notranslate nohighlight">\(\{\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}\}\)</span> ，作数乘和加法得到</p>
 <div class="math notranslate nohighlight">
 \[\alpha_{1}|v_{1}\rangle+\alpha_{2}|v_{2}\rangle+\cdots+\alpha_{s}|v_{s}\rangle\]</div>
@@ -234,7 +237,7 @@
 <p>​  从而假设不成立，因此在给定基下，任意给定向量的坐标表示唯一。</p>
 </section>
 <section id="id3">
-<h2>1.3.2 向量的内积<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>1.3.2 向量的内积<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>​  向量的内积是一个从向量空间  <span class="math notranslate nohighlight">\(V \times V\)</span> 到数域 <span class="math notranslate nohighlight">\(K\)</span> 的一个映射  <span class="math notranslate nohighlight">\((-,-)\)</span> , 并满足以下性质:</p>
 <p>​  1、映射  <span class="math notranslate nohighlight">\((-,-)\)</span> 对第二项是线性的，即：</p>
 <div class="math notranslate nohighlight">

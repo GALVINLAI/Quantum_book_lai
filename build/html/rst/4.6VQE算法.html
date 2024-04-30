@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.6 VQE算法 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -120,8 +123,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>4.6 VQE算法</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">4.6 VQE算法</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/4.6VQE算法.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -132,11 +135,11 @@
            <div itemprop="articleBody">
              
   <section id="vqe">
-<h1>4.6 VQE算法<a class="headerlink" href="#vqe" title="Permalink to this heading">¶</a></h1>
+<h1>4.6 VQE算法<a class="headerlink" href="#vqe" title="Link to this heading">¶</a></h1>
 <p>  随着量子化学理论的不断完善，计算化学已经成了化学工作者解释实验现象、预测实验结果、指导实验设计的重要工具，在药物的合成、催化剂的制备等方面有着广泛的应用。但是，面对计算化学所涉及的巨大计算量，经典计算机在计算精度、计算尺寸等方面显得能力有限，这就在一定程度上限制了计算化学的发展。而费曼曾提出：可以创造一个与已知物理系统条件相同的系统，让它以相同的规律演化，进而获得我们自己想要的信息。费曼的这一猜想提示我们——既然化学所研究的体系是量子体系，我们何不在量子计算机上对其进行模拟呢？</p>
 <p>  就目前的量子计算机发展水平而言，可以通过变分量子特征值求解算法（Variational-Quantum-Eigensolver，简称VQE），在量子计算机上实现化学模拟。该算法作为用于寻找一个较大矩阵H的特征值的量子与经典混合算法，不仅能保证量子态的相干性，其计算结果还能达到化学精度。</p>
 <section id="id1">
-<h2>4.6.1 计算化学<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>4.6.1 计算化学<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <p><strong>1.1 定义</strong></p>
 <p>  计算化学，顾名思义，就是利用数学方法通过计算机程序对化学体系进行模拟计算，以解释或解决化学问题。它主要包括两个分支——量子化学与分子模拟。</p>
 <img alt="../_images/4.6.1.png" class="align-center" src="../_images/4.6.1.png" />
@@ -163,7 +166,7 @@
 <p class="centered">
 <strong>图4.6.6 动力学模拟</strong></p></section>
 <section id="id2">
-<h2>4.6.2 量子化学<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>4.6.2 量子化学<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  量子化学，作为计算化学的主要研究方向之一，简单来说就是应用量子力学的规律和方法来研究化学问题。</p>
 <img alt="../_images/4.6.7.png" class="align-center" src="../_images/4.6.7.png" />
 <p class="centered">
@@ -177,7 +180,7 @@
 <p>  就目前而言，面对量子化学计算中所涉及到的如此惊人的计算量，经典计算机在计算精度、计算范围等方面十分有限。想要突破这一瓶颈，就必须依靠量子计算机强大的计算能力。因此，在量子计算机上实现量子化学模拟刻不容缓。</p>
 </section>
 <section id="id3">
-<h2>4.6.3 量子化学模拟<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>4.6.3 量子化学模拟<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>  量子计算最引人注目的可能性之一是对其它量子系统的模拟。量子系统的量子模拟包含了广泛的任务，其中最重要的任务包括：</p>
 <ol class="arabic simple">
 <li><p>量子系统时间演化的模拟。</p></li>
@@ -205,7 +208,7 @@
 <strong>图4.6.11 量子化学计算包</strong></p><p>  其中，PSI4；它是开源的一款从头算量子化学计算包，它能够运用Hatree-Fock方法、密度泛函理论、耦合团簇理论、组态相互作用方法等方法对电子结构进行计算。后续章节将利用PSI4中的Hatree-Fock方法计算得到的二次哈密顿量构造量子线路，寻找H2的基态。</p>
 </section>
 <section id="id4">
-<h2>4.6.4 费米子的哈密顿量<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h2>4.6.4 费米子的哈密顿量<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
 <p><strong>1、二次量子化哈密顿量</strong></p>
 <div class="math notranslate nohighlight">
 \[H \Psi=E \Psi \qquad (1)\]</div>
@@ -566,7 +569,7 @@
 <p>  虽然，B-K变换相对于J-W变换和Parity变换的在形式上很复杂，但实际上它所需要消耗的量子逻辑门数是与量子比特数的对数成线性关系，可以节省量子逻辑门资源，简化量子线路。</p>
 </section>
 <section id="id5">
-<h2>4.6.5 算法原理<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<h2>4.6.5 算法原理<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <p>  对于一个  <span class="math notranslate nohighlight">\(n\)</span> 阶的较大方阵，如果想找到它的特征值， <span class="math notranslate nohighlight">\(\lambda_{1} \lambda_{2} \ldots \lambda_{n}\)</span> 可以利用VQE算法，同样该算法也可以寻找到描述某一体系 (如多电子体系) 的哈密顿量的特征值，  <span class="math notranslate nohighlight">\(\mathrm{E}_{1} ,\mathrm{E}_{2}, \cdots ,\mathrm{E}_{n}\)</span> ，进而求得体系的基态能量 <span class="math notranslate nohighlight">\(\mathrm{E}_0\)</span> ， VQE算法是基于变分原理而提出的。</p>
 <p>  所谓变分原理，是指对于任意一个试验态 (它是一个品优波函数)，用某一体系 (如多电子体系) 的哈密顿量作用于它时，可以得到该体系在这一状态下的平均能量  <span class="math notranslate nohighlight">\(\mathrm{E}\)</span>  ，它将大于或接近于体系的基态能量  <span class="math notranslate nohighlight">\(\mathrm{E}_{0}\)</span> ，即：</p>
 <div class="math notranslate nohighlight">
@@ -763,7 +766,7 @@
 <p>  VQE算法在制备出试验态 <span class="math notranslate nohighlight">\(\left|\psi_{n}\right\rangle\)</span> 后，需要开始利用量子期望估计算法来计算试验态 <span class="math notranslate nohighlight">\(\left|\psi_{n}\right\rangle\)</span> 在分子哈密顿量上的期望。那么，什么是量子期望估计方法呢? 所谓量子期望估计，是指对于多电子体系、Heisenberg模型 (海森堡模型) 、量子Ising模型 (易辛模型) 等体系的哈密顿量H可以展开成多个子项的和，即：</p>
 <div class="math notranslate nohighlight">
 \[H=\sum h_{\alpha}^{i} \sigma_{\alpha}^{i}+\sum h_{\alpha \beta}^{i j} \sigma_{\alpha}^{i} \sigma_{\beta}^{j}+\sum h_{\alpha \beta \gamma}^{i j k} \sigma_{\alpha}^{i} \sigma_{\beta}^{j} \sigma_{\gamma}^{k}+\ldots\]</div>
-<p>  其中， <span class="math notranslate nohighlight">\(\mathrm{h}\)</span> 是实数， <span class="math notranslate nohighlight">\(\mathrm{\sigma}\)</span> 是泡利算子（ <span class="math notranslate nohighlight">\(\alpha \)</span>beta` 、 <span class="math notranslate nohighlight">\(\gamma\)</span> 可以在 <span class="math notranslate nohighlight">\(\mathrm{X}/ \mathrm{Y}/ \mathrm{Z}/\mathrm{I}\)</span> 中进行取值），而  <span class="math notranslate nohighlight">\({i}\)</span> 、 <span class="math notranslate nohighlight">\({i}\)</span>mathrm{j}` 则表示哈密顿量子项所作用的子空间。</p>
+<p>  其中， <span class="math notranslate nohighlight">\(\mathrm{h}\)</span> 是实数， <span class="math notranslate nohighlight">\(\mathrm{\sigma}\)</span> 是泡利算子（ <span class="math notranslate nohighlight">\(\alpha ` 、 :math:\)</span>beta` 、 <span class="math notranslate nohighlight">\(\gamma\)</span> 可以在 <span class="math notranslate nohighlight">\(\mathrm{X}/ \mathrm{Y}/ \mathrm{Z}/\mathrm{I}\)</span> 中进行取值），而  <span class="math notranslate nohighlight">\({i}\)</span> 、 <span class="math notranslate nohighlight">\({i}\)</span>mathrm{j}` 则表示哈密顿量子项所作用的子空间。</p>
 <p>  由于可观测量是线性的，因此在利用下式计算体系的平均能量时：</p>
 <div class="math notranslate nohighlight">
 \[E=\left\langle\psi^{*}|H| \psi\right\rangle\left(\psi^{*} \text { 与 } \psi\right. \text { 是正交归一的) }\]</div>
@@ -928,7 +931,7 @@
 <p class="centered">
 <strong>图4.6.39 优化过程</strong></p></section>
 <section id="id6">
-<h2>4.6.6 综合示例<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<h2>4.6.6 综合示例<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
 <p><strong>使用梯度下降优化器进行演示</strong> </p>
 <p>  首先，开始准备工作，导入所需要的库：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="kn">from</span> <span class="nn">pyqpanda</span> <span class="kn">import</span> <span class="o">*</span>

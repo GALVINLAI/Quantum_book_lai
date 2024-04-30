@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.1 量子软件开发环境 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -117,8 +120,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>4.1 量子软件开发环境</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">4.1 量子软件开发环境</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/4.1量子软件开发环境.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -129,9 +132,9 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>4.1 量子软件开发环境<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>4.1 量子软件开发环境<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <section id="qpanda">
-<h2>4.1.1 QPanda<a class="headerlink" href="#qpanda" title="Permalink to this heading">¶</a></h2>
+<h2>4.1.1 QPanda<a class="headerlink" href="#qpanda" title="Link to this heading">¶</a></h2>
 <p>  QPanda (Quantum Programming Architecture for NISQ Device Applications)是一个高效、便捷的量子计算开发工具库，为了让用户更容易的使用QPanda，更便捷的进行量子编程，它屏蔽了复杂的C++语法结构，甚至用户不需要了解所谓的面向对象，只需要学会如何把量子编程中用到的接口调用一遍就可以进行量子计算。</p>
 <p>  例：如何构造一个量子程序，并在量子虚拟机中运行它。</p>
 <p>  首先假设有一台量子计算机，它有2个量子比特： <span class="math notranslate nohighlight">\(Q_1\)</span> 、 <span class="math notranslate nohighlight">\(Q_2\)</span> ，接着对其中一个量子比特（ <span class="math notranslate nohighlight">\(Q_1\)</span> ）进行 <span class="math notranslate nohighlight">\(H\)</span> 门操作，构造了一个量子叠加态；并对 <span class="math notranslate nohighlight">\(Q_1\)</span> 和 <span class="math notranslate nohighlight">\(Q_2\)</span> 做 <span class="math notranslate nohighlight">\(CNOT\)</span> 门操作， <span class="math notranslate nohighlight">\(Q_1\)</span> 为控制量子比特， <span class="math notranslate nohighlight">\(Q_2\)</span> 为目标量子比特，最后对所有的量子比特进行测量操作。此时，将有50%的概率得到00或者11的测量结果。代码示例如下：</p>
@@ -170,9 +173,9 @@
 <span class="mf">5.</span><span class="p">{</span>
 <span class="mf">6.</span>    <span class="n">auto</span> <span class="n">qcircuit</span> <span class="o">=</span> <span class="n">QCircuit</span><span class="p">();</span>           <span class="o">/*</span> <span class="n">构造一个量子线路</span><span class="o">*/</span>
 <span class="mf">7.</span>
-<span class="mf">8.</span>    <span class="k">for</span> <span class="p">(</span><span class="n">auto</span> <span class="n">aiter</span> <span class="p">:</span> <span class="n">qvec</span><span class="p">)</span>               <span class="o">/*</span> <span class="n">对传入的量子比特做H门操作</span><span class="o">*/</span>
+<span class="mf">8.</span>    <span class="k">for</span> <span class="p">(</span><span class="n">auto</span> <span class="nb">aiter</span> <span class="p">:</span> <span class="n">qvec</span><span class="p">)</span>               <span class="o">/*</span> <span class="n">对传入的量子比特做H门操作</span><span class="o">*/</span>
 <span class="mf">9.</span>    <span class="p">{</span>
-<span class="mf">10.</span>        <span class="n">qcircuit</span><span class="o">&lt;&lt;</span><span class="n">H</span><span class="p">(</span><span class="n">aiter</span><span class="p">);</span>               <span class="o">/*</span> <span class="n">把H门插入的量子线路中</span><span class="o">*/</span>
+<span class="mf">10.</span>        <span class="n">qcircuit</span><span class="o">&lt;&lt;</span><span class="n">H</span><span class="p">(</span><span class="nb">aiter</span><span class="p">);</span>               <span class="o">/*</span> <span class="n">把H门插入的量子线路中</span><span class="o">*/</span>
 <span class="mf">11.</span>    <span class="p">}</span>
 <span class="mf">12.</span>
 <span class="mf">13.</span>    <span class="k">return</span> <span class="n">qcircuit</span><span class="p">;</span>                      <span class="o">/*</span> <span class="n">返回量子线路</span><span class="o">*/</span>
@@ -520,13 +523,13 @@
 <p>  3、 量子程序编译器：不仅把量子程序转换为多种量子汇编语言，更可以生成量子程序可执行文件。</p>
 </section>
 <section id="qrunes">
-<h2>4.1.2 QRunes<a class="headerlink" href="#qrunes" title="Permalink to this heading">¶</a></h2>
+<h2>4.1.2 QRunes<a class="headerlink" href="#qrunes" title="Link to this heading">¶</a></h2>
 <p>  QRunes是一种基于语句的量子编程式语言，它的出现是为了实现量子计算和经典计算的混合，从而让量子计算有更好的应用场景。QRunes根据量子计算的经典与量子混合(Quantum-Classical Hybrid)特性，在程序编译之后可以操作经典计算机与量子芯片来实现量子计算。</p>
 <p>  QRunes通过提供高级语言的形式来实现量子算法和程序的逻辑控制。其丰富的类型系统(Quatum Type, Classical Type)可以实现量子计算中数据对象的绑定和行为控制，可以满足开发人员的各类量子算法的实现需求。</p>
 <p>  QRunes由量子程序和量子线路组成的量子部分和经典函数组成的经典部分构成。量子部分定义了对量子比特的操作和行为控制。经典部分用于主程序的实现和控制量子程序的运行。</p>
 </section>
 <section id="id2">
-<h2>4.1.3 本源量子云平台<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>4.1.3 本源量子云平台<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  本源量子云平台是国内首家基于模拟器研发且能在传统计算机上模拟32位量子芯片进行量子计算和量子算法编程的系统，目前该系统主要服务于各大科研院所、高校及相关企业，旨在为专业人员提供基于量子模拟器的开发平台。</p>
 <p>  本源量子云平台提供了两种虚拟机供用户选择，其中32位量子虚拟机免费使用、64位需付费申请，虚拟机采用可视化编程模式图例+量子语言，用户可轻松拖动、放置图例进行量子算法模拟，并可将设计的运算转化为量子语言模式深入学习。量子云平台是连接用户和量子计算设备之间的桥梁，当前量子系统运作结构通常是经典计算向量子系统发起计算任务请求，待量子系统完成计算任务后再以经典信息的方式返回给用户，整个过程都需要量子云平台在中间协调。</p>
 <p>  本源量子计算云平台的工作结构可以划分为四个部分：后端系统、控制指令、量子云端、以及用户端；其中后端系统包括了量子虚拟机，以及不同组织机构开发的量子芯片；控制指令则是通过其他编程语言或底层语言构建的能被量子系统识别的指令；量子云即是可视化编程、数据中转、用户数据存储交流等云服务；用户端，包括问题的设计、算法规则构造、可视化结果等。</p>

@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5.1 利用QPanda测试量子系统噪声 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -112,8 +115,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>5.1 利用QPanda测试量子系统噪声</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">5.1 利用QPanda测试量子系统噪声</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/5.1利用QPanda测试量子系统噪声.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -124,7 +127,7 @@
            <div itemprop="articleBody">
              
   <section id="qpanda">
-<h1>5.1 利用QPanda测试量子系统噪声<a class="headerlink" href="#qpanda" title="Permalink to this heading">¶</a></h1>
+<h1>5.1 利用QPanda测试量子系统噪声<a class="headerlink" href="#qpanda" title="Link to this heading">¶</a></h1>
 <p>  近些年来，量子计算机芯片包含的量子比特数和量子比特质量不断提升，可以预计，不远的将来会出现包含数百个量子比特，且量子比特质量足够高的量子计算机芯片，称之为NISQ装置。如何用NISQ装置解决具体的实际问题是一个研究热点，比如VQE,QAOA都是有应用前景的NISQ量子算法。NISQ装置中量子比特数还不允许纠错编码，所以NISQ装置是一种噪声容忍装置，在NISQ装置中运行的量子算法都会受到噪声的影响。NISQ量子算法需要对量子噪声有一定的免疫性，需要在含噪声的环境中研究NISQ量子算法。QPanda中包含噪声量子虚拟机，可以模拟带噪声的量子线路，测试量子算法在噪声影响下的性能变化，从而辅助NISQ量子算法的开发。首先对量子噪声做一简单介绍。</p>
 <p><strong>量子噪声</strong></p>
 <p>  量子计算机不是一个孤立系统，在运行的时候，不可避免会和环境产生耦合，从而影响量子计算机的运行过程，通常用噪声来描述环境对量子计算机的影响。 量子系统的噪声可以用一组算符和  <span class="math notranslate nohighlight">\(\mathrm{K}=\{\mathrm{K}{1}, \mathrm{~K}{2}, \ldots, \mathrm{K}{\mathrm{s}}\}\)</span> 描述： <span class="math notranslate nohighlight">\(\{\mathrm{K}{1}, \mathrm{~K}{2}, \ldots, \mathrm{K}{\mathrm{s}}\}\)</span> 也被称为Kraus算子，  <span class="math notranslate nohighlight">\(\mathrm{K}_{\mathrm{i}}\)</span> 需要满足关系式</p>
@@ -253,7 +256,7 @@
 <p>  用上面的公式对实验数据进行拟合，可以得到3种噪声对应的 3 个常数 <span class="math notranslate nohighlight">\(\alpha\)</span> ；</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned} &amp;\alpha_{\text {dephasing }}=16.051 \\ &amp;\alpha_{\text {bitflip }}=16.247 \\ &amp;\alpha_{\text {depolarizing }}=18.846 \end{aligned}\end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(\alpha\)</span> 越大，说明对应噪声对  <span class="math notranslate nohighlight">\(Q A O A\)</span> 影响越大，可以看出退极化噪声对  <span class="math notranslate nohighlight">\(Q A O A\)</span> 影响最大。 下面考虑噪声参数  <span class="math notranslate nohighlight">\(\mathrm{p}\)</span> 和  <span class="math notranslate nohighlight">\(\mathrm{QAOA}\)</span> 步数  <span class="math notranslate nohighlight">\(\mathrm{n}\)</span> 比较小的实验数据，选取满足 <span class="math notranslate nohighlight">\(\mathrm{np}&lt;0.02\)</span> 的实验数据，当 <span class="math notranslate nohighlight">\(\mathrm{np}\)</span> 比较小时， <span class="math notranslate nohighlight">\(\mathrm{y} \cong 1-\alpha \mathrm{np}\)</span> ，令  <span class="math notranslate nohighlight">\(\mathrm{x}=\mathrm{np}\)</span> ，得到  <span class="math notranslate nohighlight">\(\mathrm{y}\)</span> 与  <span class="math notranslate nohighlight">\(\mathrm{x}\)</span> 关系如图  <span class="math notranslate nohighlight">\(5.1.5\)</span> 所示，其中 ”  <span class="math notranslate nohighlight">\(x\)</span> “点是实验数据，红线是斜率分别等于得到的3个拟合参数的直线，可以看出，当  <span class="math notranslate nohighlight">\(\mathrm{np}\)</span> 比较小时，噪声损失函数与理想损失函数的比特因子  <span class="math notranslate nohighlight">\(\mathrm{y}\)</span> 与  <span class="math notranslate nohighlight">\(\mathrm{np}\)</span> 成线性关系。</p>
+<p><span class="math notranslate nohighlight">\(\alpha\)</span> 越大，说明对应噪声对  <span class="math notranslate nohighlight">\(Q A O A\)</span> 影响越大，可以看出退极化噪声对  <span class="math notranslate nohighlight">\(Q A O A\)</span> 影响最大。 下面考虑噪声参数  <span class="math notranslate nohighlight">\(\mathrm{p}\)</span> 和  <span class="math notranslate nohighlight">\(\mathrm{QAOA}\)</span> 步数  <span class="math notranslate nohighlight">\(\mathrm{n}\)</span> 比较小的实验数据，选取满足 <span class="math notranslate nohighlight">\(\mathrm{np}&lt;0.02\)</span> 的实验数据，当 <span class="math notranslate nohighlight">\(\mathrm{np}\)</span> 比较小时， <span class="math notranslate nohighlight">\(\mathrm{y} \cong 1-\alpha \mathrm{np}\)</span> ，令  <span class="math notranslate nohighlight">\(\mathrm{x}=\mathrm{np}\)</span> ，得到  <span class="math notranslate nohighlight">\(\mathrm{y}\)</span> 与  <span class="math notranslate nohighlight">\(\mathrm{x}\)</span> 关系如图  <span class="math notranslate nohighlight">\(5.1.5\)</span> 所示，其中 “  <span class="math notranslate nohighlight">\(x\)</span> “点是实验数据，红线是斜率分别等于得到的3个拟合参数的直线，可以看出，当  <span class="math notranslate nohighlight">\(\mathrm{np}\)</span> 比较小时，噪声损失函数与理想损失函数的比特因子  <span class="math notranslate nohighlight">\(\mathrm{y}\)</span> 与  <span class="math notranslate nohighlight">\(\mathrm{np}\)</span> 成线性关系。</p>
 <a class="reference internal image-reference" href="../_images/5.1.5a.png"><img alt="../_images/5.1.5a.png" class="align-center" src="../_images/5.1.5a.png" style="width: 400px;" /></a>
 <p class="centered">
 <strong>(a)退相位噪声</strong></p><a class="reference internal image-reference" href="../_images/5.1.5b.png"><img alt="../_images/5.1.5b.png" class="align-center" src="../_images/5.1.5b.png" style="width: 400px;" /></a>

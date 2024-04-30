@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5.2 量子机器学习 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -112,8 +115,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>5.2 量子机器学习</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">5.2 量子机器学习</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/5.2量子机器学习.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -124,7 +127,7 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>5.2 量子机器学习<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>5.2 量子机器学习<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <p>  从《2001：太空漫游》中HAL9000的惊鸿一瞥，到大卫·杰洛德在《When HARLIE Was One》中对何为人类的探讨，再到近年《心理测量者》等对交由AI管理的反乌托邦社会的存在的合理性的思考，半个余世纪以来，伴随着计算机科学的飞速发展，人工智能成为了最引人注目的方向之一。这或许是千百年来人类“造物”畅想和现实最接近的一次。诸多科幻作品中描绘的足以撼动现代文明根基的新一代智慧生命的诞生可能离21世纪还很遥远，但如Siri、Cortana这般具备自我学习功能的程序已经深入到普通人的生活之中。</p>
 <p>  而机器学习正是实现人工智能的重要途径，其关注于通过经验自动改进的计算机算法的研究。换言之，我们期冀通过某些算法使计算机“学会”自行分析某一类数据中的规律，并利用获得的规律对未知数据进行预测。常见的机器学习算法可以分为监督学习、无监督学习和强化学习三类。监督学习从给定目标的训练集中学习得到某个函数，并通过函数对未知数据进行预测，本节着重讨论的分类器便是一例。无监督学习与监督学习相比，训练集不进行人为的目标标注，常见的有聚类算法。强化学习同样没有目标标注，而会对输入有着具有延时性的某种奖惩反馈，算法会随着环境的变动而逐步调整其行为，监督学习与无监督学习的数据之间是独立的，而强化学习存在前后依赖关系。Q-Learning是典型的强化学习算法。</p>
 <p>  如前文所言，量子计算机有着不容小觑的并行计算能力，而对于机器学习，强大的算力正是其需要的。这样，两者便有了结合的前提。本书其他章节介绍的变分本征求解器（VQE）、量子近似优化算法（QAOA算法）等便是其中的代表。包括上述在内的诸多目前被广泛讨论的量子机器学习算法都属于量子-经典混合算法的范畴。令量子计算机处理其擅长的部分，其余工作交给经典计算机，是一个较为现实的方案。</p>

@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1.3 量子计算软件介绍 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -116,8 +119,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>1.3 量子计算软件介绍</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">1.3 量子计算软件介绍</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/1.3量子计算软件介绍.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,9 +131,9 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>1.3 量子计算软件介绍<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>1.3 量子计算软件介绍<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <section id="id2">
-<h2>1.3.1 量子语言<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>1.3.1 量子语言<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  由于当前量子计算机的通用体系架构未得到统一，在硬件层面上的技术路线也未最终确定，所以目前还无法确定哪种量子机器指令集相对更科学、更合理。现阶段在量子计算编程领域的研究者们大多从“量子线路图”、“量子计算汇编语言”、“量子计算高级编程语言”的方式入手，不断寻找未来可能最受量子计算机发展欢迎的编程语言。</p>
 <p>  自20世纪80年代以来，专业从事物理和计算复杂性研究的学者提出了诸多量子算法，他们多数不具备计算机编程思维，使用图形化的方式表示量子程序、量子算法，在某种程度上来说，曾是最简洁的量子编程语言。直到现在，在量子比特数量较少的前提条件下，量子线路图是大多数从事量子计算的研究者一开始采用的最广泛的形式，目前大多数的量子计算平台（如本源量子计算云平台、IBM Q平台）均支持这一编程方式。</p>
 <img alt="../_images/1.3.1.png" class="align-center" src="../_images/1.3.1.png" />
@@ -140,13 +143,13 @@
 <p>  由于每个量子机器必须由经典设备控制，现有的量子编程语言包含经典控制结构，例如循环和条件执行，并允许对经典和量子数据进行操作；量子编程语言有助于使用高级构造表达量子算法。</p>
 </section>
 <section id="id3">
-<h2>1.3.2 量子软件开发包<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<h2>1.3.2 量子软件开发包<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
 <p>  使用量子语言进行量子编程，是一件顺理成章的事，但是在开发工程师的眼中，用量子语言进行量子编程只是最基础的一种方法，如何最大效率的使用量子语言构建最为便捷或功能足够强大的量子程序是一直追求的目标。</p>
 <p>  随着量子语言的不断成熟，量子计算行业中各类量子软件开发包层出不穷，它们提供着各种量子编程工具，诸如各类数据库、代码示例、程序开发的流程和指南，允许开发人员在特定量子平台上创造量子软件应用程序等。</p>
 <p>  在量子计算行业，量子软件开发包是指一个提供了创建和操作量子程序的量子计算工具集，以及提供了模拟量子程序的方法包，并且允许开发者使用基于云的量子设备来运行、检验自己所开发的量子计算程序。根据不同的后端处理系统，量子软件开发工具分为两大类：一类是可以访问量子处理器的SDK，一类是基于量子计算模拟器的SDK。前者以苏黎世联邦理工学院开发的ProjectQ、IBM的qiskit、Rigetti的Forest为代表，这类SDK允许开发者在原型量子器件和量子模拟器上运行量子电路；后者的使用范围相对较大，是目前量子计算行业采取的相对普遍的量子软件开发包后端处理形式，采用量子模拟器制作的量子软件开发包的好处是——它们不需要跟量子芯片产生直接的物理关联，用户在自己的电脑上通过SDK模拟量子计算芯片的物理功能，执行量子计算过程，获得量子计算模拟成果，并可利用量子虚拟机、模拟器的程序优点，模拟量子算法，同时可在通用量子计算机问世之后快速对接使用。微软的Q#开发套件、Google的Criq以及本源的QPanda均属于量子软件开发工具。</p>
 </section>
 <section id="id4">
-<h2>1.3.3 量子云平台<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<h2>1.3.3 量子云平台<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
 <p>  自1982年Richard Feynman提出建造量子计算机的设想以来，近半个世纪的时间里人类一直在坚持不懈地实现这一目标。2000年以后，虽然世界各国在量子计算机的硬件研发方面不断取得进步，但是由于量子态非常“挑剔”——它们需要在非常低的温度下储存，否则可能会受到干扰和破坏。</p>
 <p>  就目前的技术和工艺，还远远达不到像经典计算机那样在常温下批量制造、运行，这就间接限制了量子计算机的现实应用。在这样的背景下，越来越多的量子计算公司、研究机构发布了各自的量子计算云平台，已知的包括IBM的Quantum Experience、Rigetti的 Forest、本源量子计算云平台等，主要的目的是在量子计算领域占得先机。</p>
 <img alt="../_images/1.3.2.png" class="align-center" src="../_images/1.3.2.png" />

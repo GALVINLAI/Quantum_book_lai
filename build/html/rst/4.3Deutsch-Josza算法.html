@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.3 Deutsch-Josza算法 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -116,8 +119,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>4.3 Deutsch-Josza算法</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">4.3 Deutsch-Josza算法</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/4.3Deutsch-Josza算法.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,7 +131,7 @@
            <div itemprop="articleBody">
              
   <section id="deutsch-josza">
-<h1>4.3 Deutsch-Josza算法<a class="headerlink" href="#deutsch-josza" title="Permalink to this heading">¶</a></h1>
+<h1>4.3 Deutsch-Josza算法<a class="headerlink" href="#deutsch-josza" title="Link to this heading">¶</a></h1>
 <p>  量子算法是量子计算落地实用的最大驱动力，好的量子算法设计将更快速推动量子计算的发展。</p>
 <p>  Deutsch-Jozsa 量子算法，简称 D-J 算法， David Deutsch 和 Richard Jozsa 早在 1992 年提出了该算法，这是第一个展示了量子计算和经典计算在解决具体问题时所具有明显差异性的算法。</p>
 <p>  D-J 算法是这样描述的：给定两个不同类型的函数，通过计算，判断该函数是属于哪一类型的函数，其可用来演示说明量子计算如何在计算能力上远超经典计算。</p>
@@ -182,7 +185,7 @@
 <div class="math notranslate nohighlight">
 \[\rightarrow \mathrm{Z}\]</div>
 <section id="d-j">
-<h2>4.3.1 在本源量子云计算服务平台上实现D-J算法<a class="headerlink" href="#d-j" title="Permalink to this heading">¶</a></h2>
+<h2>4.3.1 在本源量子云计算服务平台上实现D-J算法<a class="headerlink" href="#d-j" title="Link to this heading">¶</a></h2>
 <p>  访问本源量子云平台：<a class="reference external" href="https://qcloud.originqc.com.cn/">https://qcloud.originqc.com.cn/</a> ，选择仿真开发训练云进入量子线路编程页面。</p>
 <img alt="../_images/4.3.4.png" class="align-center" src="../_images/4.3.4.png" />
 <p class="centered">
@@ -238,7 +241,7 @@
 <p class="centered">
 <strong>图4.3.16 任务结果—概率统计图</strong></p></section>
 <section id="qpandadj">
-<h2>4.3.2 在QPanda上实现DJ算法<a class="headerlink" href="#qpandadj" title="Permalink to this heading">¶</a></h2>
+<h2>4.3.2 在QPanda上实现DJ算法<a class="headerlink" href="#qpandadj" title="Link to this heading">¶</a></h2>
 <p>  下面的代码可以在github的QPanda仓库中的Applications/DJ_Algorithm/DJ_Algorithm.cpp中找到。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="c1">#include &quot;Core/Utilities/Tools/Utils.h&quot;</span>
 <span class="mf">2.</span><span class="c1">#include &quot;QAlg/DJ_Algorithm/DJ_Algorithm.h&quot;</span>

@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.2 量子程序 &mdash; 量子计算与编程入门 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -30,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> 量子计算与编程入门
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            量子计算与编程入门
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -116,8 +119,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>2.2 量子程序</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">2.2 量子程序</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/2.2量子程序.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,13 +131,13 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>2.2 量子程序<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>2.2 量子程序<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 <section id="id2">
-<h2>2.2.1 量子计算原理<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>2.2.1 量子计算原理<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
 <p>  经典计算中，最基本的单元是比特，而最基本的控制模式是逻辑门，可以通过逻辑门的组合来达到控制电路的目的。类似地，处理量子比特的方式就是量子逻辑门，使用量子逻辑门，有意识的使量子态发生演化，所以量子逻辑门是构成量子算法的基础。</p>
 <p><strong>酉变换</strong></p>
 <p>  酉变换是一种矩阵，也是一种操作，它作用在量子态上得到的是一个新的量子态。使用  <span class="math notranslate nohighlight">\(U\)</span> 来表达酉矩阵,  <span class="math notranslate nohighlight">\(U^{\dagger}\)</span> 表示酉矩阵的转置复共轭矩阵，二者满足运算关系  <span class="math notranslate nohighlight">\(UU^{\dagger}=I\)</span> ，所以酉矩阵的转置复共轭矩阵也是一个酉矩阵，说明酉变换是一种可逆变换。</p>
-<p>  一般酉变换在量子态上的作用是变换矩阵左乘以右矢进行计算的。例如一开始有一个量子态  <span class="math notranslate nohighlight">\(|\psi_{0}\rangle\)</span> , 经过酉变换  <span class="math notranslate nohighlight">\(U\)</span> 之后得到  <span class="math notranslate nohighlight">\(|\psi\rangle=U\left|\psi_{0}\right\rangle\)</span></p>
+<p>  一般酉变换在量子态上的作用是变换矩阵左乘以右矢进行计算的。例如一开始有一个量子态  <span class="math notranslate nohighlight">\(|\psi_{0}\rangle\)</span> , 经过酉变换  <span class="math notranslate nohighlight">\(U\)</span> 之后得到  <span class="math notranslate nohighlight">\(|\psi\rangle=U\left|\psi_{0}\right\rangle`\)</span></p>
 <p>  或者也可以写为</p>
 <div class="math notranslate nohighlight">
 \[\langle\psi|=\left\langle\psi_{0}\right| U^{\dagger}\]</div>
@@ -421,7 +424,7 @@
 \[\left|\psi_{3}\right\rangle=\frac{M_{0}^{1}\left|\psi_{2}\right\rangle}{\sqrt{P_{0}(1)}}=\frac{\sqrt{2}}{2}|01\rangle+\frac{\sqrt{2}}{2}|11\rangle\]</div>
 </section>
 <section id="if-while">
-<h2>2.2.2 量子计算的 if 和 while<a class="headerlink" href="#if-while" title="Permalink to this heading">¶</a></h2>
+<h2>2.2.2 量子计算的 if 和 while<a class="headerlink" href="#if-while" title="Link to this heading">¶</a></h2>
 <p>  所谓量子线路，从本质上是一个量子逻辑门的执行序列，它是从左至右依次执行的。即使介绍了函数调用的思想，也可以理解为这是一种简单地内联展开，即把函数中的所有逻辑门插入到调用处，自然地，可能会考虑在量子计算机的层面是否存在类似于经典计算机中的循环和分支语句。因此，就有了QIF和QWHILE。</p>
 <p><strong>l 基于测量的跳转</strong></p>
 <p>  作为QIF和QWHILE的判断条件的对象，并不是量子比特，而是一个经典的信息，往往，这个经典的信息是基于测量的。在量子程序执行时，测量语句会对量子比特施加一个测量操作，之后将这个比特的测量结果保存到经典寄存器中，最后，可以根据这个经典寄存器的值，选择接下来要进行的操作。例如：</p>
